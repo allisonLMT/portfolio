@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import './styles/normalize-fwd.css';
 import './styles/index.scss';
 import AppRouter from './routers/AppRouter';
 
