@@ -1,0 +1,24 @@
+// centering
+@mixin margin-center {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+// Mixins for creating a flex row of
+// and evenly spacing out the
+// elements along the row
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+//uses flex properties to center vertically and horizontally
+@mixin flex-center-vert-hor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

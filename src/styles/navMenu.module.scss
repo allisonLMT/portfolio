@@ -2,20 +2,34 @@
 
 .navBar {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a,
+    a:visited,
+    a:focus,
+    a:hover,
+    a:active {
+        color: black;
+    }
 }
 
 
 .siteTitle {
     font-family: $logoFont;
+    font-size: 20px;
+    font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 15px;
+    
 }
 
 .navBurger {
     width: 45px;
     height: 45px;
     position: relative;
-    margin: 10px auto;
+    margin: 10px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -82,4 +96,22 @@ transform: rotate(-45deg);
 top: 18px;
 width: 0%;
 left: 50%;
+}
+
+nav {
+    display: none;
+
+    a{
+        display: block;
+        padding: 20px 30px 20px 20px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        text-align: right;
+        font-size: 18px;
+    }
+}
+
+nav.open {
+    display: block;
 }

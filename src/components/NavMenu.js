@@ -5,8 +5,6 @@ import classes from 'classnames';
 
 function NavMenu() {
 
- 
-
     const [ isOpen, setIsOpen ] = useState(false);
     
     // toggle the state on the navBurger, triggered onclick
@@ -26,11 +24,11 @@ function NavMenu() {
                     <span></span>
                 </div> 
             </div>
-            <nav>
-                <NavLink to='/'>Home</NavLink>
-                <NavLink to='/about'>About</NavLink>
-                <NavLink to='/portfolio'>Portfolio</NavLink>
-                <NavLink to='/contact'>Contact</NavLink>
+            <nav className={ classes({ [styles.open] : isOpen }) }>
+                <NavLink to='/'>home</NavLink>
+                <NavLink to='/about'>about</NavLink>
+                <NavLink to='/portfolio'>portfolio</NavLink>
+                <NavLink to='/contact'>contact</NavLink>
             </nav>
         </div>  
     );
