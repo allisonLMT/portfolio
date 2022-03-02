@@ -1,11 +1,32 @@
+@use 'mixins' as *;
+
 .footer {
+    border: 1px solid red;
     position: absolute;
     bottom: 0px; 
     width: 100%;
-    height: 75px;
+    //height: 75px;
     padding-top: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    a {
+        display: block;
+    }
+
+    img {
+        height: 52px;
+        width: 52px;
+        padding: 10px;
+    }
+}
+
+.icons {
+    @include flex-center-vert-hor;
+}
+
+small {
+    margin: 5px auto 10px;
 }
