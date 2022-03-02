@@ -16,14 +16,16 @@ function NavMenu() {
 
     return (
         <div>
-            <Link to='/'>Allison Tredwell</Link>
-            <div className={ classes( styles.navBurger, { [styles.open] : isOpen } ) } 
-                onClick={() => { handleToggle() } }>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> 
+            <div className={styles.navBar}>
+                <Link to='/' className={styles.siteTitle}>Allison Tredwell</Link>
+                <div className={ classes( styles.navBurger, { [styles.open] : isOpen } ) } 
+                    onClick={() => { handleToggle() } }>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> 
+            </div>
             <nav>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/about'>About</NavLink>

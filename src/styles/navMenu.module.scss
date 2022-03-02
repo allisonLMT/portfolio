@@ -1,8 +1,21 @@
+@use 'variables' as *;
+
+.navBar {
+    display: flex;
+}
+
+
+.siteTitle {
+    font-family: $logoFont;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .navBurger {
-    width: 50px;
+    width: 45px;
     height: 45px;
     position: relative;
-    margin: 50px auto;
+    margin: 10px auto;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -17,7 +30,7 @@
 .navBurger span {
     display: block;
     position: absolute;
-    height: 7px;
+    height: 4px;
     width: 100%;
     background: black;
     border-radius: 2px;
