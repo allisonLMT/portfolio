@@ -1,14 +1,18 @@
 import React from 'react';
 import NavMenu from '../components/NavMenu.js';
+import Footer from '../components/Footer.js';
 
 
 
 function PageSingleProject() {
 
     return(
-        <div>
-             <NavMenu />
-            <h1>Single Project</h1>
+        <div className='page-container' >
+            <NavMenu />
+            <div className='content-wrap' >
+                <h1>Single Project</h1>
+            </div>
+            <Footer />
         </div>
     );
 };
