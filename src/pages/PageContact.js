@@ -32,6 +32,9 @@ function PageContact() {
                 <NavMenu />
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
+                    <h3>{restData.acf.contact_content[0].line}</h3>
+                    <p>{restData.acf.contact_content[1].line}</p>
+                    <p>{restData.acf.contact_content[2].line}</p>
                 </div>
                 <Footer />
             </div>

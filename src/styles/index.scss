@@ -17,10 +17,14 @@ body {
   //min-height: calc(100vh - 90px);
 }
 .content-wrap {
-  border: 1px solid blue;
+  //border: 1px solid blue;
   margin: 0 20px;
-  //margin: 55px auto 90px;
-  padding-bottom: 90px;
+  //padding-bottom includes 90px for footer, and 10px for space
+  padding-bottom: 100px;
+}
+
+ul {
+  padding-inline-start: 20px;
 }
 
 code {
