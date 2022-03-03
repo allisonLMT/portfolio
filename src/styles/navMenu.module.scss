@@ -17,7 +17,7 @@
 
 .siteTitle {
     font-family: $logoFont;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
@@ -44,8 +44,8 @@
 .navBurger span {
     display: block;
     position: absolute;
-    height: 4px;
-    width: 100%;
+    height: 3px;
+    width: 90%;
     background: black;
     border-radius: 2px;
     opacity: 1;
@@ -61,7 +61,7 @@
 }
 
 .navBurger span:nth-child(1) {
-top: 0px;
+    top: 6px;
 }
 
 .navBurger span:nth-child(2),.navBurger span:nth-child(3) {
@@ -69,7 +69,7 @@ top: 18px;
 }
 
 .navBurger span:nth-child(4) {
-top: 36px;
+    top: 30px;  
 }
 
 .navBurger.open span:nth-child(1) {
@@ -108,10 +108,15 @@ nav {
         color: white;
         text-decoration: none;
         text-align: right;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 
 nav.open {
     display: block;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
 }

@@ -3,19 +3,24 @@
 body {
   margin: 0;
   font-family: $bodyFont;
-  font-size: 14px;
+  // 1rem = 16px
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 // change the calc value depending on the height of the navbar
 .page-container {
+  border: 1px solid green;
   position: relative;
-  min-height: calc(100vh - 175px);
+  min-height: 100vh;
+  //min-height: calc(100vh - 90px);
 }
 .content-wrap {
-  margin: 100px auto 70px;
-  padding-bottom: 70px;
+  border: 1px solid blue;
+  margin: 0 20px;
+  //margin: 55px auto 90px;
+  padding-bottom: 90px;
 }
 
 code {

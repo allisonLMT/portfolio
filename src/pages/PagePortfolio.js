@@ -6,6 +6,9 @@ import Footer from '../components/Footer.js';
 
 function PagePortfolio() {
 
+
+    //similar to the Posts wp-rest. Will need to map through all of the posts of projects
+
     return(
         <div className='page-container' >
             <NavMenu />
