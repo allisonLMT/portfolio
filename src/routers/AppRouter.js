@@ -8,6 +8,7 @@ import PageContact from '../pages/PageContact';
 import PageNotFound from '../pages/PageNotFound';
 
 
+
 function AppRouter() {
 
     const featuredImage = ( featuredImageObject ) => {

@@ -35,8 +35,8 @@ function PagePortfolio( {featuredImage} ) {
                 <NavMenu />
                 <div className='content-wrap' >
                     <h1>Portfolio</h1>
-                    {restData.map(project =>
-                        <ProjectCard key={project.id} project={project} featuredImage={featuredImage} />
+                    {restData.map((eachProject, i) =>
+                        <ProjectCard key={eachProject.id} project={restData[i]} featuredImage={featuredImage} />
                     )}
                 </div>
                 <Footer />
