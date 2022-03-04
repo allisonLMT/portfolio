@@ -1,0 +1,21 @@
+@use '_mixins' as *;
+
+.accordionHeader {
+    @include flex-vert-center-hor-space;
+    border: 1px solid red;
+    height: 55px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.accordionContent {
+    display: none;
+    border: 1px solid blue;
+}
+
+.open {
+    display: block;
+}

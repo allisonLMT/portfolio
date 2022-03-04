@@ -22,3 +22,9 @@
     align-items: center;
     text-align: center;
 }
+
+@mixin flex-vert-center-hor-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
