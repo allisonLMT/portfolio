@@ -32,14 +32,14 @@ function PageAbout() {
                     <h1>{restData.title.rendered}</h1>
                     <h2>{restData.acf.education}</h2>
                     <ul>
-                        {restData.acf.education_content.map(school =>
-                        <li>{school.education}</li>
+                        {restData.acf.education_content.map((school, i) =>
+                        <li key={i} >{school.education}</li>
                         )}
                     </ul>
                     <h2>{restData.acf.languages_tools}</h2>
                     <ul>
-                        {restData.acf.languages_tools_content.map(tool =>
-                            <li>{tool.languages_tools}</li>
+                        {restData.acf.languages_tools_content.map((tool, i) =>
+                            <li key={i} >{tool.languages_tools}</li>
                         )}
                     </ul>
                     <h2>{restData.acf.my_approach}</h2>
