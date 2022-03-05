@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Accordion from '../components/Accordion.js';
+import AccordionDesign from '../components/AccordionDesign.js';
 import NavMenu from '../components/NavMenu.js';
 import Footer from '../components/Footer.js';
 
@@ -35,7 +35,8 @@ function PageProject() {
                 <NavMenu />
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
-                    <Accordion />
+                    <AccordionDesign />
+                    <AccordionDesign />
                 </div>
                 <Footer />
             </div>
