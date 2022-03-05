@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import AccordionDesign from '../components/AccordionDesign.js';
-import NavMenu from '../components/NavMenu.js';
-import Footer from '../components/Footer.js';
+import Button from '../components/Button';
+import AccordionDesign from '../components/AccordionDesign';
+import NavMenu from '../components/NavMenu';
+import Footer from '../components/Footer';
 
 // should also recieve featuredImage in the AppRouter to use those images
 
@@ -35,6 +36,7 @@ function PageProject() {
                 <NavMenu />
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
+                    <Button url={restData.acf.project_url} btnText="Live Project" />
                     <AccordionDesign />
                     <AccordionDesign />
                 </div>

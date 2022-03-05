@@ -23,6 +23,7 @@
     text-align: center;
 }
 
+//uses flex to center vertically, with horizontal space between
 @mixin flex-vert-center-hor-space {
     display: flex;
     align-items: center;

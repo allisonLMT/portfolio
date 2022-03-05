@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../components/Button';
 
 function ProjectCard({ project, featuredImage }) {
+
+   
 
     return (
         <article key={project.id}>
@@ -15,6 +18,7 @@ function ProjectCard({ project, featuredImage }) {
                 <h2>{project.title.rendered}</h2>
                 <p>{project.slug}</p>
             </Link>
+            <Button url={`/project/${project.id}`} btnText="Learn More" />
         </article>
     );
 };

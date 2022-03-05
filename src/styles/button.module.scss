@@ -1,0 +1,15 @@
+@use 'mixins' as *;
+
+.button {
+   @include flex-center-vert-hor;
+
+    a{
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 3px;
+        color: black;
+        text-decoration: none;
+        
+    }
+};
