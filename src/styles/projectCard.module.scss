@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+
+article {
+    padding: 15px 0;
+}
+
+.info {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+
+    img {
+        //display: block;
+        height: 300px;
+        width: 300px;
+    }
+}
