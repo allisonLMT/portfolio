@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
-import NavMenu from '../components/NavMenu.js'
-import Footer from '../components/Footer.js';
+import Button from '../components/Button';
+import NavMenu from '../components/NavMenu'
+import Footer from '../components/Footer';
 
 
 function PageAbout() {
@@ -44,6 +45,7 @@ function PageAbout() {
                     </ul>
                     <h2>{restData.acf.my_approach}</h2>
                     {restData.acf.my_approach_content[0].approach}
+                    <Button url='contact' btnText="Contact Me" />
                 </div>
                 <Footer />
             </div>
