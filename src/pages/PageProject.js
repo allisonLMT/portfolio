@@ -74,7 +74,7 @@ function PageProject() {
                             </div>
                         }
                     </section>
-                    {/* short circuit for features here */}
+                    <Button url={restData.acf.project_url} btnText="Live Project" />
                     { restData.acf.feature &&        
                     <section>
                         <h2>Features</h2>
@@ -83,11 +83,11 @@ function PageProject() {
                                     )}
                     </section>
                     }
-                    <Button url={restData.acf.project_url} btnText="Live Project" />
-                    <Accordion section="process"/>
-                    <Accordion section="design" />
-                    <Accordion section="development" />
-                    <Accordion section="conclusion" />
+                    
+                    <Accordion section="process" project={restData}/>
+                    <Accordion section="design" project={restData}/>
+                    <Accordion section="development" project={restData}/>
+                    <Accordion section="conclusion" project={restData}/>
                 </div>
                 <Footer />
             </div>

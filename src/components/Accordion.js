@@ -6,7 +6,7 @@ import arrowDown from '../images/icons/arrow-down-thin.svg';
 
 
 
-function Accordion({ section }) {
+function Accordion({ section, project }) {
 
     const [ isOpen, setIsOpen ] = useState(false);
     
@@ -15,18 +15,27 @@ function Accordion({ section }) {
         setIsOpen(!isOpen);
     };
 
+    let header = project.acf[section+"_header"];
+    //let content = project.acf[section+"_content"];
+
     return (
         <section>
             <div className={styles.accordionHeader}
             onClick={() => { handleToggle() } }>
-                {/* needs to take the section title passed from the specific Accordion (design, etc) and display it as a title */}
-                <h2>Section Name</h2>
+                <h2>{header}</h2>
                 <img src={ isOpen ? arrowUp : arrowDown } alt="accordion open/close icon" />
-               {/* can I pass the process/design/dev to select the type of content? */}
             </div>
             <div className={ classes( styles.accordionContent, { [styles.open] : isOpen} ) }>
-                <h3>section sub-heading</h3>
-                <p>content</p>
+                { project.acf[section+"_content"] !== false &&
+                    <div>
+                        <ul>
+                            <li>hello</li>
+                            {project.acf[section+"_content"].map((oneRow, i) => 
+                                <li key={i}>{oneRow.content}</li>
+                            )}
+                        </ul>
+                    </div>
+                }
             </div> 
         </section>
     )
