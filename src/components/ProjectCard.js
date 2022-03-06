@@ -16,7 +16,7 @@ function ProjectCard({ project, featuredImage }) {
                 } */}
                 <img src={project._embedded['wp:featuredmedia']['0'].source_url} alt={project._embedded['wp:featuredmedia']['0'].alt_text} />
                 <h2>{project.title.rendered}</h2>
-                <p>{project.slug}</p>
+                <p>{project.acf.one_liner}</p>
             </Link>
             <Button url={`/project/${project.id}`} btnText="Learn More" />
         </article>
