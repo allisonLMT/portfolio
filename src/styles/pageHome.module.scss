@@ -1,0 +1,35 @@
+.about {
+    position: absolute;
+    top: 12%;
+    left: 45%;
+    width: 174px;
+    height: auto;
+}
+
+.accent {
+    position: absolute;
+    top: 34%;
+    left: 0%;
+    height: 232px;
+    width: 270px;
+    z-index: -5;
+    background-color: #1c85b6;
+    opacity: 0.5;
+}
+
+.work {
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    width: 245px;
+    height: auto;
+}
+
+.contact {
+    position: absolute; 
+    top: 67%;
+    right: 0;
+    //left: 35%;
+    width: 252px;
+    height: auto;
+}

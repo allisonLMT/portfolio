@@ -16,7 +16,7 @@ function Accordion({ section, project }) {
     };
 
     let header = project.acf[section+"_header"];
-    //let content = project.acf[section+"_content"];
+    let content = project.acf[section+"_content"];
 
     return (
         <section>
@@ -26,11 +26,10 @@ function Accordion({ section, project }) {
                 <img src={ isOpen ? arrowUp : arrowDown } alt="accordion open/close icon" />
             </div>
             <div className={ classes( styles.accordionContent, { [styles.open] : isOpen} ) }>
-                { project.acf[section+"_content"] !== false &&
+                { Array.isArray(project.acf[section+"_content"]) &&
                     <div>
                         <ul>
-                            <li>hello</li>
-                            {project.acf[section+"_content"].map((oneRow, i) => 
+                            {content.map((oneRow, i) => 
                                 <li key={i}>{oneRow.content}</li>
                             )}
                         </ul>
