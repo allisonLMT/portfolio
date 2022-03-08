@@ -23,6 +23,11 @@ function NavMenu() {
                     <span></span>
                     <span></span>
                 </div> 
+                <nav className={styles.desktopNav}>
+                    <NavLink to='/about' className={styles.slide} >about</NavLink>
+                    <NavLink to='/portfolio' className={styles.slide} >portfolio</NavLink>
+                    <NavLink to='/contact' className={styles.slide} >contact</NavLink>
+                </nav>
             </div>
             <nav className={ classes( styles.navMenu, { [styles.open] : isOpen }) }>
                 <NavLink to='/' className={styles.slide} >home</NavLink>

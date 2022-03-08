@@ -23,6 +23,9 @@
     text-transform: uppercase;
     padding: 20px;
     
+    @media (min-width: 1000px) {
+        font-size: 1.85rem;
+    }
 }
 
 .navBurger {
@@ -39,6 +42,10 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+
+    @media (min-width: 1000px) {
+        display: none;
+    }
 }
 
 .navBurger span {
@@ -98,7 +105,7 @@ width: 0%;
 left: 50%;
 }
 
-nav {
+.navMenu {
     display: none;
 
     a{
@@ -110,6 +117,10 @@ nav {
         text-align: right;
         font-size: 1.125rem;
     }
+
+    @media (min-width: 1000px) {
+        display: none;
+    }
 }
 
 nav.open {
@@ -119,4 +130,21 @@ nav.open {
     width: 100%;
     z-index: 10;
     overflow: hidden;
+
+    @media (min-width: 1000px) {
+        display: none;
+    }
+}
+
+nav.desktopNav {
+    display: none;
+    a {
+        padding: 0 40px;
+        text-decoration: none;
+        font-size: 1.25rem;
+    }
+
+    @media (min-width: 1000px) {
+        display: block;
+    }
 }
