@@ -31,6 +31,7 @@ function PageAbout() {
                 <NavMenu />
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
+                    {/* Add img here of myself, with blur-zoom */}
                     <h2>{restData.acf.education}</h2>
                     <ul>
                         {restData.acf.education_content.map((school, i) =>

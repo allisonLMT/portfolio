@@ -4,6 +4,22 @@
     height: 142px;
     width: 157px;
     background-color: #fdd440;
+
+    @media (min-width: 550px) {
+        left: 63%;
+        width: 165px;
+        height: 175px;
+    }
+    @media (min-width: 750px) {
+        left: 73%;
+        width: 180px;
+        height: 163px;
+    }
+    @media (min-width: 1000px) {
+        top: 10%;
+        width: 220px;
+        height: 250px;
+    }
 }
 
 .about {
@@ -12,7 +28,21 @@
     left: 48%;
     width: 140px;
     height: auto;
-    filter: drop-shadow(1px 1px 1px grey)
+    filter: drop-shadow(1px 1px 1px grey);
+
+    @media (min-width: 550px) {
+        left: 58%;
+        width: 160px;
+    }
+    @media (min-width: 750px) {
+        left: 63%;
+        width: 200px;
+    }
+    @media (min-width: 1000px) {
+        top: 16%;
+        left: 68%;
+        width: 220px;
+    }
 }
 
 .workAccent {
@@ -20,10 +50,24 @@
     top: 38%;
     left: 0%;
     height: 210px;
-    width: 212px;
+    width: 210px;
     z-index: -5;
     background-color: #1c85b6;
     opacity: 0.4;
+
+    @media (min-width: 550px) {
+        top: 28%;
+        left: 3%;
+    }
+    @media (min-width: 750px) {
+        left: 10%;
+        width: 250px;
+        height: 250px;
+    }
+    @media (min-width: 1000px) {
+        left: 5%;
+        width: 360px;
+    }
 }
 
 .work {
@@ -32,7 +76,20 @@
     left: 8%;
     width: 200px;
     height: auto;
-    filter: drop-shadow(1px 1px 1px grey)
+    filter: drop-shadow(1px 1px 1px grey);
+
+    @media (min-width: 550px) {
+        top: 35%;
+        width: 225px;
+    }
+    @media (min-width: 750px) {
+        left: 15%;
+        top: 33%;
+        width: 265px;
+    }
+    @media (min-width: 1000px) {
+        width: 300px;
+    }
 }
 
 .contactAccent {
@@ -42,6 +99,19 @@
     width: 250px;
     background-color: #ed1c24;
     //opacity: 0.9;
+
+    @media (min-width: 550px) {
+        left: 10%;
+        width: 300px;
+    }
+    @media (min-width: 750px) {
+        top: 87%;
+        left: 25%;
+        width: 350px;
+    }
+    @media (min-width: 1000px) {
+        left: 37%;
+    }
 }
 
 .contact {
@@ -50,9 +120,22 @@
     left: 48%;
     width: 175px;
     height: auto;
-    filter: drop-shadow(1px 1px 1px lightgrey)
+    filter: drop-shadow(1px 1px 1px lightgrey);
+
+    @media (min-width: 550px) {
+        width: 200px;
+    }
+    @media (min-width: 750px) {
+        left: 57%;
+        width: 220px;
+    }
+    @media (min-width: 1000px) {
+        left: 62%;
+        width: 240px;
+    }
 }
 
+// Colorize zoom from: w3bits.com/css-image-hover-zoom
 div.colorize {
     overflow: hidden;
 }
