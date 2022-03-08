@@ -14,7 +14,7 @@ function PageProject() {
 
     const { id } = useParams();
 
-    const restPath = `https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project/${id}?_embed`;
+    const restPath = `https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project/${id}?acf_format=standard&embed`;
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 

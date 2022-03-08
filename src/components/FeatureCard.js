@@ -8,6 +8,11 @@ function FeatureCard ({ feature }) {
         <div className={styles.featureCard}>
             {feature.feature_title && <h3>{feature.feature_title}</h3>}
             {/* need to add the screen recording in a short circuit here */}
+            {feature.feature_media &&
+                <video src={feature.feature_media} autoPlay="autoplay" muted loop width='320'>
+                    Your browser does not support the video tag.
+                </video>
+            }
             {feature.feature_content && <p>{feature.feature_content}</p>}
         </div>
     )
