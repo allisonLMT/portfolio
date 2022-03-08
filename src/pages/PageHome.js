@@ -34,22 +34,22 @@ function PageHome() {
             <div className='page-container' >
                 <NavMenu />
                 <div className={classes('content-wrap', styles.content)} >
-                    <div className={styles.aboutAccent}></div>
+                    <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
                     <Link to="/about">
                         <div className={styles.colorize}>
-                            <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={styles.about}/>
+                            <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={classes(styles.about, styles.slideRight)}/>
                         </div>
                     </Link>
-                    <div className={styles.workAccent}></div>
+                    <div className={classes(styles.fadeIn, styles.workAccent)}></div>
                     <Link to="/portfolio">
-                        <div className={styles.colorize}>
-                            <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={styles.work}/>
+                        <div className={classes(styles.colorize)}>
+                            <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={classes(styles.work, styles.slideLeft)}/>
                         </div>
                     </Link>
-                    <div className={styles.contactAccent}></div>
+                    <div className={classes(styles.fadeIn, styles.contactAccent)}></div>
                     <Link to="/contact">
                         <div className={styles.colorize}>
-                            <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={styles.contact}/>
+                            <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={classes(styles.contact, styles.slideRight)}/>
                         </div>
                     </Link>
                 </div>
