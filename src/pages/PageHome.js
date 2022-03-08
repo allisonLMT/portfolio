@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import classes from 'classnames';
 import styles from '../styles/pageHome.module.scss';
 import NavMenu from '../components/NavMenu.js';
-import Footer from '../components/Footer.js';
+
 
 function PageHome() {
 
@@ -32,17 +33,24 @@ function PageHome() {
         return(
             <div className='page-container' >
                 <NavMenu />
-                <div className='content-wrap' >
+                <div className={classes('content-wrap', styles.content)} >
+                    <div className={styles.aboutAccent}></div>
                     <Link to="/about">
-                        <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={styles.about}/>
+                        <div className={styles.colorize}>
+                            <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={styles.about}/>
+                        </div>
                     </Link>
-                    <div className={styles.accent}></div>
+                    <div className={styles.workAccent}></div>
                     <Link to="/portfolio">
-                        <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={styles.work}/>
+                        <div className={styles.colorize}>
+                            <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={styles.work}/>
+                        </div>
                     </Link>
-                    
+                    <div className={styles.contactAccent}></div>
                     <Link to="/contact">
-                        <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={styles.contact}/>
+                        <div className={styles.colorize}>
+                            <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={styles.contact}/>
+                        </div>
                     </Link>
                 </div>
                 {/* <Footer /> */}

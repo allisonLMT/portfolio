@@ -1,35 +1,69 @@
+.aboutAccent {
+    position: absolute;
+    left: 60%;
+    height: 142px;
+    width: 157px;
+    background-color: #fdd440;
+}
+
 .about {
     position: absolute;
     top: 12%;
-    left: 45%;
-    width: 44%;
+    left: 48%;
+    width: 140px;
     height: auto;
+    filter: drop-shadow(1px 1px 1px grey)
 }
 
-.accent {
+.workAccent {
     position: absolute;
-    top: 34%;
+    top: 38%;
     left: 0%;
-    height: 30%;
-    width: 59%;
+    height: 210px;
+    width: 212px;
     z-index: -5;
     background-color: #1c85b6;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .work {
     position: absolute;
-    top: 40%;
+    top: 42%;
     left: 8%;
-    width: 62%;
+    width: 200px;
     height: auto;
+    filter: drop-shadow(1px 1px 1px grey)
+}
+
+.contactAccent {
+    position: absolute;
+    top: 83%;
+    height: 37px;
+    width: 250px;
+    background-color: #ed1c24;
+    //opacity: 0.9;
 }
 
 .contact {
     position: absolute; 
     top: 73%;
-    right: 0;
-    //left: 35%;
-    width: 64%;
+    left: 48%;
+    width: 175px;
     height: auto;
+    filter: drop-shadow(1px 1px 1px lightgrey)
+}
+
+div.colorize {
+    overflow: hidden;
+}
+
+.colorize img {
+    transition: transform .5s, filter 1.5s ease-in-out;
+    //filter: grayscale(100%);
+}
+
+.colorize:hover img,
+.colorize:active img {
+    filter: grayscale(0);
+    transform: scale(1.1);
 }

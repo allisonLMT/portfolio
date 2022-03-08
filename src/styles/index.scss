@@ -13,6 +13,7 @@ body {
 .page-container {
   //border: 1px solid green;
   position: relative;
+  overflow: hidden;
   min-height: 100vh;
   //min-height: calc(100vh - 90px);
 }
