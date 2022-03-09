@@ -1,0 +1,14 @@
+@use '_mixins' as *;
+
+.pageNav {
+    @include flex-vert-center-hor-space;
+    
+    padding: 20px 0;
+}
+
+.previous, 
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

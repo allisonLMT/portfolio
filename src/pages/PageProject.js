@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import NavMenu from '../components/NavMenu';
 import Button from '../components/Button';
 import FeatureCard from '../components/FeatureCard';
 import Accordion from '../components/Accordion';
-import NavMenu from '../components/NavMenu';
+import PreviousNext from '../components/PreviousNext';
 import Footer from '../components/Footer';
 
 // should also receive featuredImage function in the AppRouter to use those images
@@ -88,6 +89,7 @@ function PageProject() {
                     <Accordion section="design" project={restData}/>
                     <Accordion section="development" project={restData}/>
                     <Accordion section="conclusion" project={restData}/>
+                    <PreviousNext />
                 </div>
                 <Footer />
             </div>
