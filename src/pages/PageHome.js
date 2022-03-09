@@ -53,7 +53,6 @@ function PageHome() {
                         </div>
                     </Link>
                 </div>
-                {/* <Footer /> */}
             </div>
         );
     }

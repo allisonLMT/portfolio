@@ -3,8 +3,8 @@
     left: 60%;
     height: 142px;
     width: 157px;
-    background-color: #fdd440;
-
+    background-color: #f0c378;
+  
     @media (min-width: 550px) {
         left: 63%;
         width: 165px;
@@ -207,6 +207,6 @@ div.colorize {
 .colorize:hover img,
 .colorize:active img {
     filter: grayscale(0);
-    transform: scale(1.1);
+    transform: scale(0.95);
 }
 
