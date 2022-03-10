@@ -1,4 +1,6 @@
 import React, { useState, useEffect} from 'react';
+import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
+import "@reach/skip-nav/styles.css";
 import Button from '../components/Button';
 import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer';
@@ -28,7 +30,9 @@ function PageAbout() {
     if ( isLoaded ) {
         return(
             <div className='page-container' >
+                <SkipNavLink />
                 <NavMenu />
+                <SkipNavContent />
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
                     {/* Add img here of myself, with blur-zoom */}

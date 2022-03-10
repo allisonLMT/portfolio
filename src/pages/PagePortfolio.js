@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
+import "@reach/skip-nav/styles.css";
 import NavMenu from '../components/NavMenu.js';
 import ProjectCard from '../components/ProjectCard.js';
 import Footer from '../components/Footer.js';
@@ -32,7 +34,9 @@ function PagePortfolio( {featuredImage} ) {
 
         return(
             <div className='page-container' >
+                <SkipNavLink />
                 <NavMenu />
+                <SkipNavContent />
                 <div className='content-wrap' >
                     <h1>Portfolio</h1>
                     {restData.map((eachProject, i) =>

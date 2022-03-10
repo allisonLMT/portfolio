@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
+import "@reach/skip-nav/styles.css";
 import classes from 'classnames';
 import styles from '../styles/pageHome.module.scss';
 import NavMenu from '../components/NavMenu.js';
@@ -32,7 +34,9 @@ function PageHome() {
     if ( isLoaded ) {
         return(
             <div className='page-container' >
+                <SkipNavLink />
                 <NavMenu />
+                <SkipNavContent />
                 <div className={classes('content-wrap', styles.content)} >
                     <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
                     <Link to="/about">

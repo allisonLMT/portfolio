@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
+import "@reach/skip-nav/styles.css";
 import NavMenu from '../components/NavMenu.js';
 import Footer from '../components/Footer.js';
 
@@ -29,7 +31,9 @@ function PageContact() {
     if ( isLoaded ) {
         return(
             <div className='page-container' >
+                <SkipNavLink />
                 <NavMenu />
+                <SkipNavContent />
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
                     <h3>{restData.acf.contact_content[0].line}</h3>

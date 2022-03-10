@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
+import "@reach/skip-nav/styles.css";
 import styles from '../styles/pageProject.module.scss';
 import NavMenu from '../components/NavMenu';
 import Button from '../components/Button';
@@ -36,7 +38,9 @@ function PageProject() {
     if ( isLoaded ) {
         return(
             <div className='page-container' >
+                <SkipNavLink />
                 <NavMenu />
+                <SkipNavContent />
                 <div className='content-wrap' >
                     <section>
                         <h1>{restData.title.rendered}</h1>
