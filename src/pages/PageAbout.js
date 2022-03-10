@@ -36,20 +36,33 @@ function PageAbout() {
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
                     {/* Add img here of myself, with blur-zoom */}
-                    <h2>{restData.acf.education}</h2>
-                    <ul>
-                        {restData.acf.education_content.map((school, i) =>
-                        <li key={i} >{school.education}</li>
-                        )}
-                    </ul>
-                    <h2>{restData.acf.languages_tools}</h2>
-                    <ul>
-                        {restData.acf.languages_tools_content.map((tool, i) =>
-                            <li key={i} >{tool.languages_tools}</li>
-                        )}
-                    </ul>
-                    <h2>{restData.acf.my_approach}</h2>
-                    {restData.acf.my_approach_content[0].approach}
+                    {/* Education */}
+                    {restData.acf.education && <h2>{restData.acf.education}</h2>}
+                    {restData.acf.education_content && 
+                        <ul>
+                            {restData.acf.education_content.map((school, i) => 
+                                <li key={i}>{school.education}</li>
+                            )}
+                        </ul>
+                    }
+                    {/* Languages & Tools */}
+                    {restData.acf.languages_tools && <h2>{restData.acf.languages_tools}</h2>}
+                    {restData.acf.languages_tools_content && 
+                        <ul>
+                            {restData.acf.languages_tools_content.map((tool, i) => 
+                                <li key={i}>{tool.languages_tools}</li>
+                            )}
+                        </ul>
+                    }
+                    {/* My Approach */}
+                    {restData.acf.my_approach && <h2>{restData.acf.my_approach}</h2>}
+                    {restData.acf.my_approach_content && 
+                        <ul>
+                            {restData.acf.my_approach_content.map((onePoint, i) => 
+                                <li key={i}>{onePoint.approach}</li>
+                            )}
+                        </ul>
+                    }
                     <Button url='contact' btnText="Contact Me" />
                 </div>
                 <Footer />
