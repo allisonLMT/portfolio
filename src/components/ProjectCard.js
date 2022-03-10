@@ -5,12 +5,9 @@ import Button from '../components/Button';
 
 function ProjectCard({ project, featuredImage }) {
 
-   
-
     return (
         <article key={project.id} className={styles.card}>
             <Link to={`/project/${project.id}`} className={styles.info} >
-                {/* image, title, tools used/one liner (use slug for now?), all linked to the project page (add after with Params) */}
                 {project._embedded['wp:featuredmedia'][0] &&
                     <figure dangerouslySetInnerHTML={featuredImage(project._embedded['wp:featuredmedia'][0])}></figure>
                 }

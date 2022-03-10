@@ -80,7 +80,8 @@ function PageProject() {
                             </div>
                         }
                     </section>
-                    <Button url={restData.acf.project_url} btnText="Live Project" />
+                    {id !== 45 && <Button url={restData.acf.project_url} btnText="Live Project" />}
+                   
                     { restData.acf.feature &&        
                     <section className={styles.features}>
                         <h2>Features</h2>
