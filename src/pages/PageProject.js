@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import styles from '../styles/pageProject.module.scss';
 import NavMenu from '../components/NavMenu';
 import Button from '../components/Button';
 import FeatureCard from '../components/FeatureCard';
@@ -77,7 +78,7 @@ function PageProject() {
                     </section>
                     <Button url={restData.acf.project_url} btnText="Live Project" />
                     { restData.acf.feature &&        
-                    <section>
+                    <section className={styles.features}>
                         <h2>Features</h2>
                         {restData.acf.feature.map((oneRow, i) => 
                                         <FeatureCard key={i} feature={oneRow}/>

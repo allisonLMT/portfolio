@@ -1,0 +1,6 @@
+@use '_mixins' as *;
+
+.features {
+    @include flex-layout-row;
+    border: 1px solid green;
+}

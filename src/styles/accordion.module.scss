@@ -2,18 +2,20 @@
 
 .accordionHeader {
     @include flex-vert-center-hor-space;
-    border: 1px solid red;
+    border-top: 1px solid black;
+  
+    
     height: 55px;
 
     img {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 }
 
 .accordionContent {
     display: none;
-    border: 1px solid blue;
+ 
 }
 
 .open {
