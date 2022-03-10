@@ -6,7 +6,7 @@ function FeatureCard ({ feature }) {
 
     return (
         <div className={styles.featureCard}>
-            {feature.feature_title && <h3>{feature.feature_title}</h3>}
+            {feature.feature_title && <h4>{feature.feature_title}</h4>}
             {/* need to add the screen recording in a short circuit here */}
             {feature.feature_media &&
                 <video src={feature.feature_media} autoPlay="autoplay" muted loop width='320'>
