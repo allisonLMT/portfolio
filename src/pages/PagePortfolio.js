@@ -33,7 +33,7 @@ function PagePortfolio( {featuredImage} ) {
     if ( isLoaded ) {
 
         let projectIDarr = [];
-        {restData.map((project) => projectIDarr.push(project.id))};
+        restData.map((project) => projectIDarr.push(project.id));
         console.log(projectIDarr)
         
         return(

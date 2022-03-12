@@ -8,10 +8,10 @@ function PreviousNext() {
     return (
         <div className={styles.pageNav}>
             <div className={styles.previous}>
-                <a href=""><img src={arrowLeft} alt="previous project" /> Previous</a>
+                <a href="https://karalu.ca/"><img src={arrowLeft} alt="previous project" /> Previous</a>
             </div>
             <div className={styles.next}>
-                <a href="">Next <img src={arrowRight} alt="next project" /></a>
+                <a href="https://karalu.ca/">Next <img src={arrowRight} alt="next project" /></a>
                 
             </div>
         </div>

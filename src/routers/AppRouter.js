@@ -28,7 +28,6 @@ function AppRouter() {
       }
 
     return (
-        <div>
             <Routes>
                 <Route path='/' exact element={<PageHome />} />
                 <Route path='about' element={<PageAbout />} />
@@ -37,7 +36,7 @@ function AppRouter() {
                 <Route path='contact' element={<PageContact />} />
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
-        </div>
+        
     );
 
 };
