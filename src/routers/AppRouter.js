@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PageHome from '../pages/PageHome';
+import PageHome2 from '../pages/PageHome2';
 import PageAbout from '../pages/PageAbout';
 import PagePortfolio from '../pages/PagePortfolio';
 import PageProject from '../pages/PageProject';
@@ -28,7 +29,6 @@ function AppRouter() {
       }
 
     return (
-        <div>
             <Routes>
                 <Route path='/' exact element={<PageHome />} />
                 <Route path='home2' element={<PageHome2 />} />
@@ -38,7 +38,7 @@ function AppRouter() {
                 <Route path='contact' element={<PageContact />} />
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
-        </div>
+        
     );
 
 };

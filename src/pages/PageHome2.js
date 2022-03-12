@@ -7,7 +7,7 @@ import styles from '../styles/pageHome2.module.scss';
 import NavMenu from '../components/NavMenu.js';
 
 
-function PageHome() {
+function PageHome2() {
 
 
     window.scrollTo(0, 0);
@@ -37,29 +37,34 @@ function PageHome() {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className={classes('content-wrap', styles.content)} >
-                <div class="container">
-                    <div class="info">
-                        <div class="name"></div>
-                        <div class="title"></div>
-                        <div class="location"></div>
+                {/* <div className={classes('content-wrap')} > */}
+                <div className={styles.container}>
+                    <div className={styles.about}>
+                        <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
+                        <div className={styles.aboutImage}>
+                            <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={classes(styles.about, styles.slideRight)}/>
+                        </div>
                     </div>
-                    <div class="about">
-                        <div class="aboutAccent"></div>
-                        <div class="aboutImage"></div>
+                    <div className={styles.info}>
+                        <h2>Allison Tredwell</h2>
+                        <h3>Front End Web Developer</h3>
+                        <h3>Vancouver, BC</h3>
                     </div>
-                    <div class="work">
-                        <div class="workAccent"></div>
-                        <div class="workImage"></div>
+                    <div className={styles.work}>
+                        <div className={classes(styles.fadeIn,styles.workAccent)}></div>
+                        <Link to="/portfolio">
+                            <div className={styles.workImage}>
+                                <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={classes(styles.work, styles.slideLeft)}/>
+                            </div>
+                        </Link>
                     </div>
-                    <div class="contact">
-                        <div class="contactImage"></div>
-                        <div class="contactAccent"></div>
+                    <div className={styles.contact}>
+                        <div className={styles.contactImage}>
+                            <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={classes(styles.contact, styles.slideRight)}/>
+                        </div>
+                        <div className={classes(styles.fadeIn,styles.contactAccent)}></div>
                     </div>
-                </div>
-
-
-
+                {/* </div> */}
 
                     {/* <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
                     <Link to="/about">
@@ -85,4 +90,4 @@ function PageHome() {
     }
     return <img src="loading.gif" alt="Loading" className="loading" id="loading" />;
 };
-export default PageHome;
+export default PageHome2;
