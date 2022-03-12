@@ -15,7 +15,7 @@ function NavMenu() {
     return (
         <div>
             <div className={styles.navBar}>
-                <Link to='/home2' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>Allison Tredwell</Link>
+                <Link to='/' className={styles.siteTitle} onClick={() => { setIsOpen(false) } }>Allison Tredwell</Link>
                 <div className={ classes( styles.navBurger, { [styles.open] : isOpen } ) } 
                     onClick={() => { handleToggle() } }>
                     <span></span>

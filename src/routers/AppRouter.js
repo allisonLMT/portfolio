@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PageHome from '../pages/PageHome';
-import PageHome2 from '../pages/PageHome2';
 import PageAbout from '../pages/PageAbout';
 import PagePortfolio from '../pages/PagePortfolio';
 import PageProject from '../pages/PageProject';
@@ -31,7 +30,6 @@ function AppRouter() {
     return (
             <Routes>
                 <Route path='/' exact element={<PageHome />} />
-                <Route path='home2' element={<PageHome2 />} />
                 <Route path='about' element={<PageAbout />} />
                 <Route path='portfolio' element={<PagePortfolio featuredImage={featuredImage} />} />
                 <Route path='/project/:id' element={<PageProject />} />

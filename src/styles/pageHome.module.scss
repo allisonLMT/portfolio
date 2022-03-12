@@ -1,165 +1,139 @@
-.aboutAccent {
-    position: absolute;
-    left: 60%;
-    height: 142px;
-    width: 157px;
-    background-color: #f0c378;
-  
-    @media (min-width: 550px) {
-        left: 63%;
-        width: 165px;
-        height: 175px;
-    }
-    @media (min-width: 750px) {
-        left: 73%;
-        width: 180px;
-        height: 163px;
-    }
-    @media (min-width: 1000px) {
-        top: 10%;
-        width: 220px;
-        height: 250px;
-    }
-    @media (min-width: 1350px) {
-        top: 15%;
-        height: 275px;
+@use 'mixins' as *;
 
+.container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    //grid-template-rows: 0.95fr 1.15fr repeat(2, 0.95fr);
+    grid-template-rows: calc((100vh - 95px) * 0.23) calc((100vh - 95px) * 0.31) repeat(2, calc((100vh - 95px) * 0.23));
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about"
+      "info"
+      "work"
+      "contact";
+    max-height: calc(100vh - 65px);
+}
+
+.about {  
+    display: grid;
+    //grid-template-columns: 1.06fr 0.94fr;
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "aboutImage aboutAccent";
+    grid-area: about;
+}
+
+.aboutAccent { 
+    grid-area: aboutAccent; 
+    background-color: #F0C378;
+}
+
+.aboutImage { 
+    grid-area: aboutImage; 
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 }
 
-.about {
-    position: absolute;
-    top: 12%;
-    left: 48%;
-    width: 140px;
-    height: auto;
+.info {  
+    grid-area: info;
+    background-color: #ACCEE2;
 
-    @media (min-width: 550px) {
-        left: 58%;
-        width: 160px;
-    }
-    @media (min-width: 750px) {
-        left: 63%;
-        width: 200px;
-    }
-    @media (min-width: 1000px) {
-        top: 16%;
-        left: 68%;
-        width: 220px;
-    }
-    @media (min-width: 1350px) {
-        top: 21%;
-        left: 67%;
-        width: 247px;
-    }
-}
-
-.workAccent {
-    position: absolute;
-    top: 38%;
-    left: 0%;
-    height: 210px;
-    width: 210px;
-    z-index: -5;
-    background-color: #accee2;
-
-    @media (min-width: 550px) {
-        top: 28%;
-        left: 3%;
-    }
-    @media (min-width: 750px) {
-        left: 10%;
-        width: 250px;
-        height: 250px;
-    }
-    @media (min-width: 1000px) {
-        left: 5%;
-        width: 360px;
-    }
-    @media (min-width: 1350px) {
-        top: 24%;
-        width: 440px;
-        height: 390px;
-    }
-}
-
-.work {
-    position: absolute;
-    top: 42%;
-    left: 8%;
-    width: 200px;
-    height: auto;
-
-    @media (min-width: 550px) {
-        top: 35%;
-        width: 225px;
-    }
-    @media (min-width: 750px) {
-        left: 15%;
-        top: 33%;
-        width: 265px;
-    }
-    @media (min-width: 1000px) {
+    div {
+        margin: 0 auto;
         width: 300px;
     }
-    @media (min-width: 1350px) {
-        width: 350px;
+
+    h2 {
+        margin: 7% auto;
+        font-family: Montserrat;
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    p {
+        font-family: Inter;
+        font-weight: 500;
+        text-align: center;
+        margin: 5px 0;
     }
 }
 
-.contactAccent {
-    position: absolute;
-    top: 83%;
-    height: 37px;
-    width: 250px;
-    background-color: #ed1c24;
-    
+p.firstLine {
+    text-align: left;
+    margin-top: 10%;
+}
 
-    @media (min-width: 550px) {
-        left: 10%;
-        width: 300px;
-    }
-    @media (min-width: 750px) {
-        
-        left: 25%;
-        width: 350px;
-    }
-    @media (min-width: 1000px) {
-        left: 37%;
-        width: 500px;
-    }
-    @media (min-width: 1350px) {
-        top: 85%;
+.work {  
+    display: grid;
+    //grid-template-columns: 0.7fr 1.3fr;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "workAccent workImage";
+    grid-area: work;
+}
+
+.workAccent { 
+    grid-area: workAccent; 
+    background-color: #ED1C24;
+}
+
+.workImage { 
+    grid-area: workImage; 
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 }
 
-.contact {
-    position: absolute; 
-    top: 73%;
-    left: 48%;
-    width: 175px;
-    height: auto;
+.contact {  
+    display: grid;
+    //grid-template-columns: 1.06fr 0.94fr;
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "contactImage contactAccent";
+    grid-area: contact;
+}
 
-    @media (min-width: 550px) {
-        width: 200px;
+.contactImage { 
+    grid-area: contactImage; 
+    overflow: hidden;
+
+    img {
+       
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
-    @media (min-width: 750px) {
-        left: 57%;
-        width: 220px;
-    }
-    @media (min-width: 1000px) {
-        left: 62%;
-        width: 240px;
-    }
-    @media (min-width: 1350px) {
-        width: 260px;
-        top: 71%;
-        left: 59%;
-    }
+}
+
+.contactAccent { 
+    grid-area: contactAccent; 
+    background-color: #38618C;
 }
 
 .slideRight {
-    animation: 3s slide-right;
+    animation: 2s slide-right;
 }
 @keyframes slide-right {
     from {
@@ -171,7 +145,7 @@
 }
 
 .slideLeft {
-    animation: 3s slide-left;
+    animation: 2s slide-left;
 }
 @keyframes slide-left {
     from {
@@ -183,7 +157,7 @@
 }
 
 .fadeIn {
-    animation: fade-in ease 3s;
+    animation: fade-in ease 2s;
 }
 @keyframes fade-in{
     0% {
@@ -193,20 +167,3 @@
       opacity:1;
     }
 }
-
-// Colorize zoom from: w3bits.com/css-image-hover-zoom
-div.colorize {
-    overflow: hidden;
-}
-
-.colorize img {
-    transition: transform .5s, filter 1.5s ease-in-out;
-    filter: grayscale(100%) drop-shadow(2px 2px 2px #222222);
-}
-
-.colorize:hover img,
-.colorize:active img {
-    filter: grayscale(0);
-    transform: scale(0.95);
-}
-
