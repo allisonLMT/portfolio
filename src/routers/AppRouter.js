@@ -31,6 +31,7 @@ function AppRouter() {
         <div>
             <Routes>
                 <Route path='/' exact element={<PageHome />} />
+                <Route path='home2' element={<PageHome2 />} />
                 <Route path='about' element={<PageAbout />} />
                 <Route path='portfolio' element={<PagePortfolio featuredImage={featuredImage} />} />
                 <Route path='/project/:id' element={<PageProject />} />
