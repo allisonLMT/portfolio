@@ -37,53 +37,32 @@ function PageHome2() {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                {/* <div className={classes('content-wrap')} > */}
                 <div className={styles.container}>
                     <div className={styles.about}>
                         <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
-                        <div className={styles.aboutImage}>
-                            <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={classes(styles.about, styles.slideRight)}/>
-                        </div>
+                        <Link to="/about" className={styles.aboutImage}>
+                            <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={styles.slideRight}/>
+                        </Link>
                     </div>
                     <div className={styles.info}>
-                        <h2>Allison Tredwell</h2>
-                        <h3>Front End Web Developer</h3>
-                        <h3>Vancouver, BC</h3>
+                        <div className={styles.text}>
+                            <h2>Allison Tredwell</h2>
+                            <h3>Front End Web Developer</h3>
+                            <h3>Vancouver, BC</h3>
+                        </div>
                     </div>
                     <div className={styles.work}>
                         <div className={classes(styles.fadeIn,styles.workAccent)}></div>
-                        <Link to="/portfolio">
-                            <div className={styles.workImage}>
-                                <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={classes(styles.work, styles.slideLeft)}/>
-                            </div>
+                        <Link to="/portfolio" className={styles.workImage}>
+                            <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={styles.slideLeft}/>
                         </Link>
                     </div>
                     <div className={styles.contact}>
-                        <div className={styles.contactImage}>
-                            <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={classes(styles.contact, styles.slideRight)}/>
-                        </div>
+                        <Link to="/contact" className={styles.contactImage}>
+                            <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={styles.slideRight}/>
+                        </Link>
                         <div className={classes(styles.fadeIn,styles.contactAccent)}></div>
                     </div>
-                {/* </div> */}
-
-                    {/* <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
-                    <Link to="/about">
-                        <div className={styles.colorize}>
-                            <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={classes(styles.about, styles.slideRight)}/>
-                        </div>
-                    </Link>
-                    <div className={classes(styles.fadeIn, styles.workAccent)}></div>
-                    <Link to="/portfolio">
-                        <div className={classes(styles.colorize)}>
-                            <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={classes(styles.work, styles.slideLeft)}/>
-                        </div>
-                    </Link>
-                    <div className={classes(styles.fadeIn, styles.contactAccent)}></div>
-                    <Link to="/contact">
-                        <div className={styles.colorize}>
-                            <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={classes(styles.contact, styles.slideRight)}/>
-                        </div>
-                    </Link> */}
                 </div>
             </div>
         );
