@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
+import Clipboard from 'react-clipboard.js';
+import copy from '../images/icons/copy.svg';
 import styles from '../styles/pageContact.module.scss';
 import classes from 'classnames';
 import NavMenu from '../components/NavMenu.js';
@@ -30,6 +32,7 @@ function PageContact() {
         fetchData();
     }, [restPath] );
 
+
     if ( isLoaded ) {
         return(
             <div className='page-container' >
@@ -38,11 +41,17 @@ function PageContact() {
                 <SkipNavContent />
                 <div className={classes('content-wrap', styles.contactWrap)} >
                     <h1>{restData.title.rendered}</h1>
-                    <div className={styles.phone}><img src={restData.acf.image.url} alt={restData.acf.image.alt} /></div>
-                    <h3>{restData.acf.contact_content[0].line}</h3>
-                    <p>{restData.acf.contact_content[1].line}</p>
-                    <p>{restData.acf.contact_content[2].line}</p>
-                    <p className={styles.email}>allison.tredwell@gmail.com</p>
+                    <h3 className={styles.accent}>{restData.acf.contact_content[0].line}</h3>
+                    <div className={styles.smalltext}>
+                        <p>{restData.acf.contact_content[1].line}</p>
+                        <p>{restData.acf.contact_content[2].line}</p>
+                    </div>
+                    <div className={styles.email}>
+                        <p>allison.tredwell@gmail.com</p>
+                    <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
+                        <img src={copy} alt="copy icon" />
+                    </Clipboard>
+                    </div>
                 </div>
                 <Footer />
             </div>

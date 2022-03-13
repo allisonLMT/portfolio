@@ -1,9 +1,12 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .contactWrap {
     margin-left: 20px;
     margin-right: 20px;
 
     h3 {
-        margin: 20px auto;
+        //margin: 40px auto;
         text-align: center;
     }
     p {
@@ -13,20 +16,29 @@
   
 }
 
-div.phone {
-  display: flex;
-  justify-content: center;
-
-    img {
-        margin: 0 auto;
-        object-fit: cover;
-        //object-position: 15% 40%;
-        height: 200px;
-        width: 200px;
-        //border-radius: 50%;
-    }
+.accent {
+    background-color: $accentYellow;
+    margin-top: 70px;
+    padding: 25px 10px;
+    filter: drop-shadow(2px 2px 2px darkgrey)
 }
 
-p.email {
+.smalltext {
+    margin: 60px auto;
+}
+
+
+.email {
+    @include flex-center-vert-hor;
+    flex-wrap: wrap;
     margin-top: 40px;
+
+    p{
+        margin: 0;
+    }
+
+    button {
+        border: none;
+        background-color: white;
+    }
 }
