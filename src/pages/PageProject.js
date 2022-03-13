@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
 import styles from '../styles/pageProject.module.scss';
+import classes from 'classnames';
 import NavMenu from '../components/NavMenu';
 import Button from '../components/Button';
 import FeatureCard from '../components/FeatureCard';
@@ -41,9 +42,10 @@ function PageProject() {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className='content-wrap' >
+                <div className={classes('content-wrap', styles.projectWrap)} >
                     <section>
                         <h1>{restData.title.rendered}</h1>
+                        {/* main image here!! */}
                         { restData.acf.project_overview_content &&
                             <div>
                                 <h2>Project Overview</h2>
@@ -87,8 +89,8 @@ function PageProject() {
                     <section className={styles.features}>
                         <h2>Features</h2>
                         {restData.acf.feature.map((oneRow, i) => 
-                                        <FeatureCard key={i} feature={oneRow}/>
-                                    )}
+                            <FeatureCard key={i} feature={oneRow}/>
+                        )}
                     </section>
                     }
                     
