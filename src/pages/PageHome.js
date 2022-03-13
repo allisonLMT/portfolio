@@ -39,10 +39,11 @@ function PageHome2() {
                 <SkipNavContent />
                 <div className={styles.container}>
                     <div className={styles.about}>
-                        <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
+                        <div className={styles.leftAboutAccent}></div>
                         <Link to="/about" className={styles.aboutImage}>
                             <img src={restData.acf.about_image.url} alt={restData.acf.about_image.alt} className={styles.slideRight}/>
                         </Link>
+                        <div className={classes(styles.fadeIn, styles.aboutAccent)}></div>
                     </div>
                     <div className={styles.info}>
                         <div className={styles.text}>
@@ -53,12 +54,14 @@ function PageHome2() {
                         </div>
                     </div>
                     <div className={styles.work}>
-                        <div className={classes(styles.fadeIn,styles.workAccent)}></div>
+                        <div className={classes(styles.fadeIn, styles.workAccent)}></div>
                         <Link to="/portfolio" className={styles.workImage}>
                             <img src={restData.acf.portfolio_image.url} alt={restData.acf.portfolio_image.alt} className={styles.slideLeft}/>
                         </Link>
+                        <div className={styles.rightWorkAccent}></div>
                     </div>
                     <div className={styles.contact}>
+                        <div className={styles.leftContactAccent}></div>
                         <Link to="/contact" className={styles.contactImage}>
                             <img src={restData.acf.contact_image.url} alt={restData.acf.contact_image.alt} className={styles.slideRight}/>
                         </Link>

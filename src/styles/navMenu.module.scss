@@ -2,8 +2,13 @@
 
 .navBar {
     display: flex;
+    position: fixed;
+    z-index: 5;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
+    max-height: 75px;
+    width: 100%;
 
     a,
     a:visited,

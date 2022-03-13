@@ -3,7 +3,6 @@
 .container {  
     display: grid;
     grid-template-columns: 1fr;
-    //grid-template-rows: 0.95fr 1.15fr repeat(2, 0.95fr);
     grid-template-rows: calc((100vh - 95px) * 0.23) calc((100vh - 95px) * 0.31) repeat(2, calc((100vh - 95px) * 0.23));
     gap: 10px 10px;
     grid-auto-flow: row;
@@ -17,7 +16,6 @@
 
 .about {  
     display: grid;
-    //grid-template-columns: 1.06fr 0.94fr;
     grid-template-columns: 170px 1fr;
     grid-template-rows: 1fr;
     gap: 0px 10px;
@@ -25,6 +23,20 @@
     grid-template-areas:
         "aboutImage aboutAccent";
     grid-area: about;
+
+    @media (min-width: 750px) {
+        grid-template-columns: 1fr 170px 4fr;
+        grid-template-areas: 
+            "leftAboutAccent aboutImage aboutAccent";
+
+        .leftAboutAccent {
+            grid-area: leftAboutAccent;
+            background-color: #F0C378;
+        }
+    }
+    // @media (min-width: 750px) {
+    //     grid-template-columns: 1fr 230px 4fr;
+    // }
 }
 
 .aboutAccent { 
@@ -47,6 +59,7 @@
 .info {  
     grid-area: info;
     background-color: #ACCEE2;
+    @include flex-center-vert-hor;
 
     div {
         margin: 0 auto;
@@ -70,12 +83,10 @@
 
 p.firstLine {
     text-align: left;
-    margin-top: 10%;
 }
 
 .work {  
     display: grid;
-    //grid-template-columns: 0.7fr 1.3fr;
     grid-template-columns: 1fr 200px;
     grid-template-rows: 1fr;
     gap: 0px 10px;
@@ -83,6 +94,20 @@ p.firstLine {
     grid-template-areas:
         "workAccent workImage";
     grid-area: work;
+
+    @media (min-width: 750px) {
+        grid-template-columns: 4fr 200px 1fr;
+        grid-template-areas: 
+            "workAccent workImage rightWorkAccent";
+
+        .rightWorkAccent {
+            grid-area: rightWorkAccent;
+            background-color: #ED1C24;
+        }
+    }
+    @media (min-width: 750px) {
+        grid-template-columns: 4fr 300px 1fr;
+    }
 }
 
 .workAccent { 
@@ -104,7 +129,6 @@ p.firstLine {
 
 .contact {  
     display: grid;
-    //grid-template-columns: 1.06fr 0.94fr;
     grid-template-columns: 170px 1fr;
     grid-template-rows: 1fr;
     gap: 0px 10px;
@@ -112,6 +136,20 @@ p.firstLine {
     grid-template-areas:
         "contactImage contactAccent";
     grid-area: contact;
+
+    @media (min-width: 750px) {
+        grid-template-columns: 1fr 170px 4fr;
+        grid-template-areas: 
+            "leftContactAccent contactImage contactAccent";
+
+        .leftContactAccent {
+            grid-area: leftContactAccent;
+            background-color: #38618C;
+        }
+    }
+    // @media (min-width: 750px) {
+    //     grid-template-columns: 1fr 230px 4fr;
+    // }
 }
 
 .contactImage { 
@@ -119,7 +157,6 @@ p.firstLine {
     overflow: hidden;
 
     img {
-       
         object-fit: cover;
         display: block;
         width: 100%;

@@ -11,7 +11,7 @@ body {
 
 // change the calc value depending on the height of the navbar
 .page-container {
-  //border: 1px solid green;
+  border: 1px solid green;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -20,8 +20,10 @@ body {
   //min-height: calc(100vh - 90px);
 }
 .content-wrap {
+  position: relative;
   //border: 1px solid blue;
   //margin: 0 20px;
+  margin-top: 80px;
   //padding-bottom includes 90px for footer, and 10px for space
   padding-bottom: 100px;
 }
