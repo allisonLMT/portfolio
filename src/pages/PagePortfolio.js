@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
+import styles from '../styles/pagePortfolio.module.scss';
 import NavMenu from '../components/NavMenu.js';
 import ProjectCard from '../components/ProjectCard.js';
 import Footer from '../components/Footer.js';
+import classes from 'classnames';
 
 
 
@@ -41,11 +43,13 @@ function PagePortfolio( {featuredImage} ) {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className='content-wrap' >
+                <div className={classes('content-wrap', styles.pageWrap)} >
                     <h1>Portfolio</h1>
-                    {restData.map((eachProject, i) =>
-                        <ProjectCard key={eachProject.id} project={restData[i]} featuredImage={featuredImage} />
-                    )}
+                    <div className={styles.projects}>
+                        {restData.map((eachProject, i) =>
+                            <ProjectCard key={eachProject.id} project={restData[i]} featuredImage={featuredImage} />
+                        )}
+                    </div>
                 </div>
                 <Footer />
             </div>
