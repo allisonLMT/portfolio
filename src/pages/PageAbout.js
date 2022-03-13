@@ -4,6 +4,8 @@ import "@reach/skip-nav/styles.css";
 import Button from '../components/Button';
 import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer';
+import styles from '../styles/pageAbout.module.scss';
+import classes from 'classnames';
 
 
 function PageAbout() {
@@ -33,9 +35,9 @@ function PageAbout() {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className='content-wrap' >
+                <div className={classes('content-wrap', styles.aboutWrap)} >
                     <h1>{restData.title.rendered}</h1>
-                    {/* Add img here of myself, with blur-zoom */}
+                    {/* Add img here of myself, with blur-zoom? */}
                     {/* Education */}
                     {restData.acf.education && <h2>{restData.acf.education}</h2>}
                     {restData.acf.education_content && 
