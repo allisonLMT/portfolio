@@ -43,7 +43,7 @@ function PagePortfolio( {featuredImage} ) {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className={classes('content-wrap', styles.pageWrap)} >
+                <div className={classes('content-wrap')} >
                     <h1>Portfolio</h1>
                     <div className={styles.projects}>
                         {restData.map((eachProject, i) =>

@@ -1,0 +1,32 @@
+.contactWrap {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    h3 {
+        margin: 20px auto;
+        text-align: center;
+    }
+    p {
+        margin: 5px auto;
+        text-align: center;
+    }
+  
+}
+
+div.phone {
+  display: flex;
+  justify-content: center;
+
+    img {
+        margin: 0 auto;
+        object-fit: cover;
+        //object-position: 15% 40%;
+        height: 200px;
+        width: 200px;
+        //border-radius: 50%;
+    }
+}
+
+p.email {
+    margin-top: 40px;
+}
