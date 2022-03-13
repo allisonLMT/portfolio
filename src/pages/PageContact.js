@@ -41,16 +41,16 @@ function PageContact() {
                 <SkipNavContent />
                 <div className={classes('content-wrap', styles.contactWrap)} >
                     <h1>{restData.title.rendered}</h1>
-                    <h3 className={styles.accent}>{restData.acf.contact_content[0].line}</h3>
-                    <div className={styles.smalltext}>
+                    <h3>{restData.acf.contact_content[0].line}</h3>
+                    <a href="mailto: allison.tredwell@gmail.com" className={classes(styles.smalltext, styles.accent)}>
                         <p>{restData.acf.contact_content[1].line}</p>
                         <p>{restData.acf.contact_content[2].line}</p>
-                    </div>
+                    </a>
                     <div className={styles.email}>
                         <p>allison.tredwell@gmail.com</p>
-                    <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
-                        <img src={copy} alt="copy icon" />
-                    </Clipboard>
+                        <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
+                            <img src={copy} alt="copy icon" />
+                        </Clipboard>
                     </div>
                 </div>
                 <Footer />

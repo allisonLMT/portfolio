@@ -117,7 +117,7 @@ left: 50%;
     a{
         display: block;
         padding: 20px 30px 20px 20px;
-        background-color: black;
+        background-color: #444444;
         color: white;
         text-decoration: none;
         text-align: right;
@@ -136,6 +136,7 @@ nav.open {
     width: 100%;
     z-index: 10;
     overflow: hidden;
+    filter: drop-shadow(2px 2px 2px darkgrey);
 
     @media (min-width: 1000px) {
         display: none;

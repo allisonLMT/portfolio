@@ -6,8 +6,10 @@
     margin-right: 20px;
 
     h3 {
-        //margin: 40px auto;
+        margin: 70px auto 0;
+        max-width: 400px;
         text-align: center;
+        line-height: 1.8rem;
     }
     p {
         margin: 5px auto;
@@ -17,14 +19,17 @@
 }
 
 .accent {
+    display: block;
+    text-decoration: none;
+    color: black;
     background-color: $accentYellow;
-    margin-top: 70px;
-    padding: 25px 10px;
+    padding: 20px 0;
+    max-width: 300px;
     filter: drop-shadow(2px 2px 2px darkgrey)
 }
 
 .smalltext {
-    margin: 60px auto;
+    margin: 50px auto;
 }
 
 
@@ -36,7 +41,6 @@
     p{
         margin: 0;
     }
-
     button {
         border: none;
         background-color: white;
