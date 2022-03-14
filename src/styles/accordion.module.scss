@@ -4,7 +4,9 @@
     @include flex-vert-center-hor-space;
     border-top: 1px solid black;
     padding: 0 20px;
-    height: 55px;
+    height: 65px;
+    max-width: 1200px;
+    margin: 0 auto;
 
     img {
         width: 25px;
@@ -14,6 +16,7 @@
 
 div.accordionHeader:hover {
     background-color: black;
+    color: white;
 
     svg {
         fill: white;
@@ -23,6 +26,8 @@ div.accordionHeader:hover {
 .accordionContent {
     display: none;
     padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .open {

@@ -1,11 +1,51 @@
 @use '_mixins' as *;
 
+img.projectCoverImage {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media(min-width: 700px) {
+        width: 450px;
+        height: 450px;
+    }
+
+    @media(min-width: 1000px) {
+        width: 600px;
+        height: 600px;
+    }
+}
+
 .features {
     @include flex-layout-row;
-  
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .marginWrap {
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2.featureHeader {
+        padding-left: 20px;
+    }
+    
+}
+
+.projectInfo {
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.infoWrap {
+
+    @media (min-width: 800px) {
+        display: flex;
+        padding: 30px 0;
+    }
 }

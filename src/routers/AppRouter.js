@@ -32,7 +32,7 @@ function AppRouter() {
                 <Route path='/' exact element={<PageHome />} />
                 <Route path='about' element={<PageAbout />} />
                 <Route path='portfolio' element={<PagePortfolio featuredImage={featuredImage} />} />
-                <Route path='/project/:id' element={<PageProject />} />
+                <Route path='/project/:id' element={<PageProject featuredImage={featuredImage} />} />
                 <Route path='contact' element={<PageContact />} />
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
