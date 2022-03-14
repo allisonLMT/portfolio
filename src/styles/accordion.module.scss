@@ -3,8 +3,7 @@
 .accordionHeader {
     @include flex-vert-center-hor-space;
     border-top: 1px solid black;
-  
-    
+    padding: 0 20px;
     height: 55px;
 
     img {
@@ -13,9 +12,17 @@
     }
 }
 
+div.accordionHeader:hover {
+    background-color: black;
+
+    svg {
+        fill: white;
+    }
+}
+
 .accordionContent {
     display: none;
- 
+    padding: 10px 20px;
 }
 
 .open {

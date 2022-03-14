@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
 import classes from 'classnames';
 import styles from '../styles/accordion.module.scss';
-import arrowUp from '../images/icons/arrow-up-thin.svg';
-import arrowDown from '../images/icons/arrow-down-thin.svg';
-
+import {ReactComponent as ArrowUp} from '../images/icons/arrow-up-thin.svg';
+//import arrowDown from '../images/icons/arrow-down-thin.svg';
+import {ReactComponent as ArrowDown} from '../images/icons/arrow-down-thin.svg';
 
 
 function Accordion({ section, project }) {
@@ -26,7 +26,7 @@ function Accordion({ section, project }) {
             <div className={styles.accordionHeader}
             onClick={() => { handleToggle() } }>
                 <h2>{header}</h2>
-                <img src={ isOpen ? arrowUp : arrowDown } alt="accordion open/close icon" />
+                { isOpen ? <ArrowUp /> : <ArrowDown /> }
             </div>
             <div className={ classes( styles.accordionContent, { [styles.open] : isOpen} ) }>
                 { Array.isArray(project.acf[section+"_content"]) &&

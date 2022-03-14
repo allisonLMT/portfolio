@@ -42,8 +42,8 @@ function PageProject() {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className={classes('content-wrap', styles.projectWrap)} >
-                    <section>
+                <div className='content-wrap' >
+                    <section className={styles.marginWrap}>
                         <h1>{restData.title.rendered}</h1>
                         {/* main image here!! */}
                         { restData.acf.project_overview_content &&
@@ -86,12 +86,12 @@ function PageProject() {
                     {(id !== "45") && <Button url={restData.acf.project_url} btnText="Live Project" />}
                    
                     { restData.acf.feature &&        
-                    <section className={styles.features}>
-                        <h2>Features</h2>
-                        {restData.acf.feature.map((oneRow, i) => 
-                            <FeatureCard key={i} feature={oneRow}/>
-                        )}
-                    </section>
+                        <section className={styles.features}>
+                            <h2 className={styles.marginWrap}>Features</h2>
+                            {restData.acf.feature.map((oneRow, i) => 
+                                <FeatureCard key={i} feature={oneRow}/>
+                            )}
+                        </section>
                     }
                     
                     <Accordion section="process" project={restData}/>
