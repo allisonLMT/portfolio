@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer';
 import styles from '../styles/pageAbout.module.scss';
-import classes from 'classnames';
+//import classes from 'classnames';
 
 
 function PageAbout() {
@@ -35,43 +35,50 @@ function PageAbout() {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className={classes('content-wrap', styles.aboutWrap)} >
+                <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
-                    <img src={restData.acf.image.url} alt={restData.acf.image.alt} />
-                    {/* Education */}
-                    {restData.acf.education && <h2>{restData.acf.education}</h2>}
-                    {restData.acf.education_content && 
-                        <section>
-                            <ul>
-                                {restData.acf.education_content.map((school, i) => 
-                                    <li key={i}>{school.education}</li>
-                                )}
-                            </ul>
+                    <div className={styles.aboutWrap}>
+                        {restData.acf.image.url &&
+                            <img src={restData.acf.image.url} alt={restData.acf.image.alt} />
+                        }
+                        <section className={styles.aboutText}>
+                            {/* Education */}
+                            { (restData.acf.education && restData.acf.education_content ) && 
+                                <section>
+                                <h2>{restData.acf.education}</h2>
+                                    <ul>
+                                        {restData.acf.education_content.map((school, i) => 
+                                            <li key={i}>{school.education}</li>
+                                        )}
+                                    </ul>
+                                </section>
+                            }
+                            {/* Languages & Tools */}
+                            { (restData.acf.languages_tools && restData.acf.languages_tools_content) && 
+                                <section>
+                                    <h2>{restData.acf.languages_tools}</h2>
+                                    <ul>
+                                        {restData.acf.languages_tools_content.map((tool, i) => 
+                                            <li key={i}>{tool.languages_tools}</li>
+                                        )}
+                                    </ul>
+                                </section>
+                            }
+                            {/* My Approach */}
+                            { ( restData.acf.my_approach && restData.acf.my_approach_content ) && 
+                                <section>
+                                    <h2>{restData.acf.my_approach}</h2>
+                                    <ul>
+                                        {restData.acf.my_approach_content.map((onePoint, i) => 
+                                            <li key={i}>{onePoint.approach}</li>
+                                        )}
+                                    </ul>
+                                </section>
+                            }
+                        <Button url='contact' btnText="Contact Me" />
                         </section>
-                    }
-                    {/* Languages & Tools */}
-                    {restData.acf.languages_tools && <h2>{restData.acf.languages_tools}</h2>}
-                    {restData.acf.languages_tools_content && 
-                        <section>
-                            <ul>
-                                {restData.acf.languages_tools_content.map((tool, i) => 
-                                    <li key={i}>{tool.languages_tools}</li>
-                                )}
-                            </ul>
-                        </section>
-                    }
-                    {/* My Approach */}
-                    {restData.acf.my_approach && <h2>{restData.acf.my_approach}</h2>}
-                    {restData.acf.my_approach_content && 
-                        <section>
-                            <ul>
-                                {restData.acf.my_approach_content.map((onePoint, i) => 
-                                    <li key={i}>{onePoint.approach}</li>
-                                )}
-                            </ul>
-                        </section>
-                    }
-                    <Button url='contact' btnText="Contact Me" />
+                    </div>
+                    
                 </div>
                 <Footer />
             </div>

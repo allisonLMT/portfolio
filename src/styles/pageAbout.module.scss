@@ -1,12 +1,35 @@
 .aboutWrap {
-   
-    margin-left: 10px;
-    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     img {
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
         width: 300px;
         height: 375px;
+        margin-bottom: 25px;
+
+        @media (min-width: 900px) {
+            margin: 0 25px;
+        }
+    }
+    
+}
+
+.aboutText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 20px;
+    max-width: 500px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    section {
+        width: 100%;
     }
 }
 

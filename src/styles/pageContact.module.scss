@@ -2,17 +2,17 @@
 @use 'mixins' as *;
 
 .contactWrap {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
 
-    h3 {
-        margin: 70px auto 0;
-        max-width: 400px;
+    h2 {
+        margin: 4.375rem auto 0;
+        max-width: 25rem;
         text-align: center;
         line-height: 1.8rem;
     }
     p {
-        margin: 5px auto;
+        margin: 0.3125rem auto;
         text-align: center;
     }
   
@@ -23,20 +23,21 @@
     text-decoration: none;
     color: black;
     background-color: $accentYellow;
-    padding: 20px 0;
-    max-width: 300px;
+    padding: 1.25rem 0;
+    max-width: 18.75rem;
     filter: drop-shadow(2px 2px 2px darkgrey)
 }
 
 .smalltext {
-    margin: 50px auto;
+    margin: 3.125rem auto;
 }
 
 
 .email {
     @include flex-center-vert-hor;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 2.5rem;
+    
 
     p{
         margin: 0;
@@ -47,6 +48,14 @@
     }
 }
 
-img.copyEmail + p.popup {
-    background: red;
+div.email + p.popup {
+    display: none;
+    background: #ACCEE2;
+    max-width: 9.375rem;
+    padding: 0.625rem;
+    border-radius: 5px;
+}
+
+div.email:hover + p.popup {
+    display: block;
 }
