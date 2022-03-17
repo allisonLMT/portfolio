@@ -49,7 +49,8 @@ function PageContact() {
                     <div className={styles.email}>
                         <p>allison.tredwell@gmail.com</p>
                         <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
-                            <img src={copy} alt="copy icon" />
+                            <img src={copy} alt="copy icon" className={styles.copyEmail}/>
+                            <p className={styles.popup}>Copy Email</p>
                         </Clipboard>
                     </div>
                 </div>

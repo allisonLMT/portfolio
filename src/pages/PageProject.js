@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
 import styles from '../styles/pageProject.module.scss';
-import classes from 'classnames';
+//import classes from 'classnames';
 import NavMenu from '../components/NavMenu';
 import Button from '../components/Button';
 import FeatureCard from '../components/FeatureCard';
@@ -48,7 +48,7 @@ function PageProject( {featuredImage} ) {
                             {/* {restData._embedded['wp:featuredmedia'][0] &&
                                     <figure dangerouslySetInnerHTML={featuredImage(restData._embedded['wp:featuredmedia'][0])}></figure>
                                 } */}
-                                <img src={restData.acf.cover_image.url} alt={restData.acf.cover_image.alt} className={styles.projectCoverImage}/>
+                            <img src={restData.acf.cover_image.url} alt={restData.acf.cover_image.alt} className={styles.projectCoverImage}/>
                             <section className={styles.projectInfo}>
                                 
                                 { restData.acf.project_overview_content &&
