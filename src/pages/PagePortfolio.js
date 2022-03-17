@@ -13,7 +13,7 @@ function PagePortfolio( {featuredImage} ) {
 
     window.scrollTo(0, 0);
 
-    //this path gets all of the posts in the 'portfolio-project' CPT in an array
+    //gets all of the posts in the 'portfolio-project' CPT in an array
     const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project?acf_format=standard&_embed'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)

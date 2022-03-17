@@ -12,7 +12,7 @@ import PreviousNext from '../components/PreviousNext';
 import Footer from '../components/Footer';
 
 
-function PageProject( {featuredImage} ) {
+function PageProject( ) {
 
     window.scrollTo(0, 0);
 
@@ -45,9 +45,6 @@ function PageProject( {featuredImage} ) {
                     <div className={styles.marginWrap}>
                         <h1>{restData.title.rendered}</h1>
                         <div className={styles.infoWrap}>
-                            {/* {restData._embedded['wp:featuredmedia'][0] &&
-                                    <figure dangerouslySetInnerHTML={featuredImage(restData._embedded['wp:featuredmedia'][0])}></figure>
-                                } */}
                             <img src={restData.acf.cover_image.url} alt={restData.acf.cover_image.alt} className={styles.projectCoverImage}/>
                             <section className={styles.projectInfo}>
                                 
@@ -91,11 +88,8 @@ function PageProject( {featuredImage} ) {
                             </section>
                             
                         </div>
-                        
                     </div>  
-
                     
-                   
                     { restData.acf.feature &&    
                         <section className={styles.marginWrap}>
                             <h2 className={styles.featureHeader}>Features</h2>
