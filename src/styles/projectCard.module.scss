@@ -2,9 +2,13 @@
 
 article {
     @include flex-wrap-center-space-btwn;
-    margin: 0 20px;
+    margin: 0 10px;
     padding: 15px 0;
     width: 300px;
+
+    @media (min-width: 400px) {
+        margin: 0 40px;
+    }
 }
 
 .info {

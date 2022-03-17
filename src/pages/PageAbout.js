@@ -10,7 +10,7 @@ import classes from 'classnames';
 
 function PageAbout() {
 
-    const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/pages/11';
+    const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/pages/11?acf_format=standard';
     const [restData, setData] = useState([]);
     const [isLoaded, setLoadStatus] = useState(false);
 
@@ -37,33 +37,39 @@ function PageAbout() {
                 <SkipNavContent />
                 <div className={classes('content-wrap', styles.aboutWrap)} >
                     <h1>{restData.title.rendered}</h1>
-                    {/* Add img here of myself, with blur-zoom? */}
+                    <img src={restData.acf.image.url} alt={restData.acf.image.alt} />
                     {/* Education */}
                     {restData.acf.education && <h2>{restData.acf.education}</h2>}
                     {restData.acf.education_content && 
-                        <ul>
-                            {restData.acf.education_content.map((school, i) => 
-                                <li key={i}>{school.education}</li>
-                            )}
-                        </ul>
+                        <section>
+                            <ul>
+                                {restData.acf.education_content.map((school, i) => 
+                                    <li key={i}>{school.education}</li>
+                                )}
+                            </ul>
+                        </section>
                     }
                     {/* Languages & Tools */}
                     {restData.acf.languages_tools && <h2>{restData.acf.languages_tools}</h2>}
                     {restData.acf.languages_tools_content && 
-                        <ul>
-                            {restData.acf.languages_tools_content.map((tool, i) => 
-                                <li key={i}>{tool.languages_tools}</li>
-                            )}
-                        </ul>
+                        <section>
+                            <ul>
+                                {restData.acf.languages_tools_content.map((tool, i) => 
+                                    <li key={i}>{tool.languages_tools}</li>
+                                )}
+                            </ul>
+                        </section>
                     }
                     {/* My Approach */}
                     {restData.acf.my_approach && <h2>{restData.acf.my_approach}</h2>}
                     {restData.acf.my_approach_content && 
-                        <ul>
-                            {restData.acf.my_approach_content.map((onePoint, i) => 
-                                <li key={i}>{onePoint.approach}</li>
-                            )}
-                        </ul>
+                        <section>
+                            <ul>
+                                {restData.acf.my_approach_content.map((onePoint, i) => 
+                                    <li key={i}>{onePoint.approach}</li>
+                                )}
+                            </ul>
+                        </section>
                     }
                     <Button url='contact' btnText="Contact Me" />
                 </div>
