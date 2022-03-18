@@ -1,17 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles/previousNext.module.scss';
 import arrowRight from '../images/icons/arrow-right-thin.svg';
 import arrowLeft from '../images/icons/arrow-left-thin.svg';
 
-function PreviousNext() {
+function PreviousNext( { prevID, prevLabel, nextID, nextLabel } ) {
+
 
     return (
         <div className={styles.pageNav}>
             <div className={styles.previous}>
-                <a href="https://karalu.ca/"><img src={arrowLeft} alt="previous project" /> Previous</a>
+                <Link to={`/project/${prevID}`}>
+                    <img src={arrowLeft} alt="previous project" /> {prevLabel}
+                </Link>
             </div>
             <div className={styles.next}>
-                <a href="https://karalu.ca/">Next <img src={arrowRight} alt="next project" /></a>
+                <Link to={`/project/${nextID}`}>
+                    {nextLabel} <img src={arrowRight} alt="next project" />
+                </Link>
                 
             </div>
         </div>

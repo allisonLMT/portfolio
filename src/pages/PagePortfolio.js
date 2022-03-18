@@ -9,12 +9,12 @@ import classes from 'classnames';
 
 
 
-function PagePortfolio( {featuredImage} ) {
+function PagePortfolio( ) {
 
     window.scrollTo(0, 0);
 
     //gets all of the posts in the 'portfolio-project' CPT in an array
-    const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project?acf_format=standard&_embed'
+    const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project?acf_format=standard'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -47,7 +47,7 @@ function PagePortfolio( {featuredImage} ) {
                     <h1>Portfolio</h1>
                     <div className={styles.projects}>
                         {restData.map((eachProject, i) =>
-                            <ProjectCard key={eachProject.id} project={restData[i]} featuredImage={featuredImage} />
+                            <ProjectCard key={eachProject.id} project={restData[i]} />
                         )}
                     </div>
                 </div>
