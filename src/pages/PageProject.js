@@ -40,12 +40,9 @@ function PageProject( ) {
     let currentProjObj;
     let currentProjIndex;
     let prevID;
-    let prevLabel = "prevL";
+    let prevLabel = '';
     let nextID;
-    let nextLabel = "nextL";
-
-    // console.log(typeof(id))
-    // console.log(typeof(nextID))
+    let nextLabel = '';
     
     if ( isLoaded ) {
 
