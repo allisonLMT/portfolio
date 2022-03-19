@@ -19,7 +19,6 @@ function PageProject( ) {
     const { id } = useParams();
 
     const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project?acf_format=standard'; 
-    //const restPath = `https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project/${id}?acf_format=standard`;
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -37,36 +36,48 @@ function PageProject( ) {
         fetchData()
     }, [restPath])
 
-    let currentProjObj;
-    let currentProjIndex;
-    let prevID;
-    let prevLabel = '';
-    let nextID;
-    let nextLabel = '';
+  
     
     if ( isLoaded ) {
 
+        var currentProjObj;
+        var currentProjIndex;
+        var prevID;
+        var nextID;
+        var prevLabel = 'previous';
+        var nextLabel = 'next';
+
         function findProject() {
-            for (let i=0; i < restData.length; i++) {
+            //findProject finds the current project in the array of all projects, and sets data for prev and next navigation component
+            //find and set the current project data
+            for (var i=0; i < restData.length; i++) {
                 //id is a string, so the project ID also needs to be a string for comparison
-                let projIDstr = restData[i].id.toString();
+                var projIDstr = restData[i].id.toString();
                 if ( projIDstr === id ) {   
                     currentProjObj = restData[i];
                     currentProjIndex = i;
                 };
             };
+            //set the previous and next data, accounting for when the current project is the first or last in the list
+            //if no custom label exists, then the default labels will apply
             if (currentProjIndex === 0) {
                 prevID = restData[restData.length-1].id; 
                 nextID = restData[1].id;
+                restData[restData.length-1].acf.label && (prevLabel = restData[restData.length-1].acf.label);
+                restData[1].acf.label && (nextLabel = restData[1].acf.label);
             } else if (currentProjIndex === (restData.length-1)) {
                 nextID = restData[0].id;
                 prevID = restData[currentProjIndex - 1].id;
+                restData[0].acf.label && (nextLabel = restData[0].acf.label);
+                restData[currentProjIndex - 1].acf.label && (prevLabel = restData[currentProjIndex - 1].acf.label);
             } else {
                 prevID = restData[currentProjIndex - 1].id;
                 nextID = restData[currentProjIndex + 1].id;
-            }
+                restData[currentProjIndex - 1].acf.label && (prevLabel = restData[currentProjIndex - 1].acf.label);
+                restData[currentProjIndex + 1].acf.label && (nextLabel = restData[currentProjIndex + 1].acf.label);
+            };
 
-        }
+        };
 
         findProject();
 
@@ -145,8 +156,8 @@ function PageProject( ) {
                 <Footer />
             </div>
         )
-        };
-        return <img src="loading.gif" alt="Loading" className="loading" id="loading" />
+    };
+    return <img src="loading.gif" alt="Loading" className="loading" id="loading" />
 };
 
 export default PageProject;
