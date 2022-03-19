@@ -56,7 +56,6 @@ function PageContact() {
                         <p>{restData.acf.contact_content[1].line}</p>
                         <p>{restData.acf.contact_content[2].line}</p>
                     </a>
-                    <div className={styles.emailWrap}>
                         <div className={styles.email} onClick={() => { handleToggle() }}>
                             <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
                                 allison.tredwell@gmail.com
@@ -64,7 +63,6 @@ function PageContact() {
                             </Clipboard>
                         </div>
                         <p className={styles.popup}>{!isCopied ? "Copy Email" : "Copied!"}</p>
-                    </div>
                 </div>
                 <Footer />
             </div>

@@ -32,17 +32,15 @@
     margin: 3.125rem auto;
 }
 
-
-.emailWrap {
-    // @include flex-center-vert-hor;
-    // flex-wrap: wrap;
-    
-    margin: 0 auto;
-}  
     
 button {
+    display: flex;
+    align-items: center;
     border: none;
     background-color: white;
+    img {
+        padding-left: 10px;
+    }
 }
 
 div.email {
