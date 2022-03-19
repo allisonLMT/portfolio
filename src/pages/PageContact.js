@@ -18,6 +18,16 @@ function PageContact() {
     const [restData, setData] = useState([]);
     const [isLoaded, setLoadStatus] = useState(false);
 
+    const [isCopied, setCopiedStatus] = useState(false);
+
+    function handleToggle() {
+        setCopiedStatus(true);
+        //after 1.5 seconds, reset the status to false
+        setTimeout(() => {
+            setCopiedStatus(false);
+        }, 1500);
+    }
+
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(restPath);
@@ -31,7 +41,7 @@ function PageContact() {
         };
         fetchData();
     }, [restPath] );
-
+  
 
     if ( isLoaded ) {
         return(
@@ -46,15 +56,15 @@ function PageContact() {
                         <p>{restData.acf.contact_content[1].line}</p>
                         <p>{restData.acf.contact_content[2].line}</p>
                     </a>
-                    
-                    <div className={styles.email}>
-                        <p></p>
-                        <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
-                            allison.tredwell@gmail.com
-                            <img src={copy} alt="copy icon" className={styles.copyEmail}/>
-                        </Clipboard>
+                    <div className={styles.emailWrap}>
+                        <div className={styles.email} onClick={() => { handleToggle() }}>
+                            <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
+                                allison.tredwell@gmail.com
+                                <img src={copy} alt="copy icon" className={styles.copyEmail}/>
+                            </Clipboard>
+                        </div>
+                        <p className={styles.popup}>{!isCopied ? "Copy Email" : "Copied!"}</p>
                     </div>
-                    <p className={styles.popup}>Copy Email</p>
                 </div>
                 <Footer />
             </div>

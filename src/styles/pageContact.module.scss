@@ -33,19 +33,23 @@
 }
 
 
-.email {
-    @include flex-center-vert-hor;
-    flex-wrap: wrap;
-    margin-top: 2.5rem;
+.emailWrap {
+    // @include flex-center-vert-hor;
+    // flex-wrap: wrap;
     
+    margin: 0 auto;
+}  
+    
+button {
+    border: none;
+    background-color: white;
+}
 
-    p{
-        margin: 0;
-    }
-    button {
-        border: none;
-        background-color: white;
-    }
+div.email {
+    display: inline-block;
+    margin-left: 50%;
+    //adjusts by half the width of the div, to center it
+    transform: translateX(-50%);
 }
 
 div.email + p.popup {
@@ -58,4 +62,5 @@ div.email + p.popup {
 
 div.email:hover + p.popup {
     display: block;
+    color: black;
 }
