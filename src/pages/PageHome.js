@@ -71,6 +71,6 @@ function PageHome2() {
             </div>
         );
     }
-    return <img src="loading.gif" alt="Loading" className="loading" id="loading" />;
+    return <img src="../loading.gif" alt="Loading" className="loading" id="loading" />;
 };
 export default PageHome2;

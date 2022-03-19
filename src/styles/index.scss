@@ -40,6 +40,15 @@ ul {
   padding-inline-start: 20px;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
 figure {
   margin: 0;
 }
@@ -47,4 +56,9 @@ figure {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.loading {
+  display: block;
+  margin: 40vh auto;
 }

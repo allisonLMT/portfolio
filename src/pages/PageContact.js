@@ -59,9 +59,9 @@ function PageContact() {
                 <Footer />
             </div>
         );
-    }
+    }; 
 
-    return <img src="loading.gif" alt="Loading" className="loading" id="loading" />
+    return <img src="../loading.gif" alt="Loading" className="loading" id="loading" />
 };
 
 export default PageContact;

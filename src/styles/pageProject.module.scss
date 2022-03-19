@@ -37,9 +37,16 @@ img.projectCoverImage {
 }
 
 .projectInfo {
+    margin: 0 auto;
+    padding: 20px;
     min-width: 300px;
     max-width: 600px;
-    padding: 20px;
+   
+}
+
+.accordions:first-child {
+    border-top: 1px solid black;
+    background-color: red;
 }
 
 .infoWrap {

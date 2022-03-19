@@ -34,7 +34,7 @@ function PageProject( ) {
             }
         }
         fetchData()
-    }, [restPath])
+    }, [restPath]);
 
   
     
@@ -76,7 +76,6 @@ function PageProject( ) {
                 restData[currentProjIndex - 1].acf.label && (prevLabel = restData[currentProjIndex - 1].acf.label);
                 restData[currentProjIndex + 1].acf.label && (nextLabel = restData[currentProjIndex + 1].acf.label);
             };
-
         };
 
         findProject();
@@ -145,19 +144,20 @@ function PageProject( ) {
                             </div>
                         </section>  
                     }
-                    
-                    <Accordion section="process" project={currentProjObj}/>
-                    <Accordion section="design" project={currentProjObj}/>
-                    <Accordion section="development" project={currentProjObj}/>
-                    <Accordion section="conclusion" project={currentProjObj}/>
+                    <div className={styles.accordions}>
+                        <Accordion section="process" project={currentProjObj}/>
+                        <Accordion section="design" project={currentProjObj}/>
+                        <Accordion section="development" project={currentProjObj}/>
+                        <Accordion section="conclusion" project={currentProjObj}/>
+                    </div>
                     <PreviousNext prevID={prevID} prevLabel={prevLabel} nextID={nextID} nextLabel={nextLabel}/>
                 </div> {/* end content-wrap */}
                 
                 <Footer />
             </div>
-        )
-    };
-    return <img src="loading.gif" alt="Loading" className="loading" id="loading" />
+        ); // end return
+    } //end if (isLoaded)
+    return <img src="../loading.gif" alt="Loading" className="loading" id="loading" />
 };
 
 export default PageProject;

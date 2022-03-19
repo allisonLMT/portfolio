@@ -2,7 +2,7 @@
 
 .accordionHeader {
     @include flex-vert-center-hor-space;
-    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 0 20px;
     height: 65px;
     max-width: 1200px;

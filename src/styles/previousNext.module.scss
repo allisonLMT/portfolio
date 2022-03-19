@@ -2,13 +2,12 @@
 
 .pageNav {
     @include flex-vert-center-hor-space;
-    padding: 25px 0;
+    padding: 25px 10px;
 
     a {
         display: flex;
         align-items: center;
-        justify-content: center;
-        
+        justify-content: center; 
     }
     img {
         height: 25px;
