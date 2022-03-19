@@ -3,6 +3,7 @@
 .accordionHeader {
     @include flex-vert-center-hor-space;
     border-bottom: 1px solid black;
+    
     padding: 0 20px;
     height: 65px;
     max-width: 1200px;
@@ -14,8 +15,9 @@
     }
 }
 
-div.accordionHeader:hover {
-    background-color: black;
+div.accordionHeader:hover,
+.headerActive {
+    background-color: #222222;
     color: white;
 
     svg {

@@ -23,7 +23,7 @@ function Accordion({ section, project }) {
             {/* only render an accordion if content exists */}
             {content &&
             <section className={styles.accordionSection}>
-                <div className={styles.accordionHeader}
+                <div className={classes(styles.accordionHeader, (isOpen && styles.headerActive))}
                 onClick={() => { handleToggle() } }>
                     <h2>{header}</h2>
                     { isOpen ? <ArrowUp /> : <ArrowDown /> }

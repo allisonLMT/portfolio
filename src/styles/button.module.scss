@@ -4,6 +4,10 @@
    @include flex-center-vert-hor;
     filter: drop-shadow(2px 2px 1.5px darkgrey);
     
+    &:active {
+        transform: scale(0.95, 0.95);
+    }
+
     a{
         margin: 10px;
         padding: 10px 15px;
