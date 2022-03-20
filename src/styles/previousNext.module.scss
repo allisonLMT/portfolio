@@ -2,7 +2,7 @@
 
 .pageNav {
     @include flex-vert-center-hor-space;
-    padding: 50px 15px 25px;
+    padding: 3.125rem 0.9375rem 1.5625rem;
 
     a {
         display: flex;
@@ -10,15 +10,15 @@
         justify-content: center; 
     }
     img {
-        height: 25px;
-        width: 25px;
+        height: 1.5625rem;
+        width: 1.5625rem;
     }
 }
 
 .previous img {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .next img {
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }

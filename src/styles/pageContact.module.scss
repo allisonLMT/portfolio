@@ -39,7 +39,7 @@ button {
     border: none;
     background-color: white;
     img {
-        padding-left: 10px;
+        padding-left: 0.625rem;
     }
 }
 
@@ -48,6 +48,7 @@ div.email {
     margin-left: 50%;
     //adjusts by half the width of the div, to center it
     transform: translateX(-50%);
+    margin-top: 2.5rem;
 }
 
 div.email + p.popup {

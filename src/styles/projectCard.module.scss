@@ -2,12 +2,12 @@
 
 article {
     @include flex-wrap-center-space-btwn;
-    margin: 0 10px;
-    padding: 15px 0;
-    width: 300px;
+    margin: 0 0.625rem;
+    padding: 0.9375rem 0;
+    width: 18.75rem;
 
-    @media (min-width: 400px) {
-        margin: 0 40px;
+    @media (min-width: 25rem) {
+        margin: 0 2.5rem;
     }
 }
 
@@ -21,7 +21,7 @@ article {
     img {
         display: block;
         margin: 0 auto;
-        height: 300px;
-        width: 300px;
+        height: 18.75rem;
+        width: 18.75rem;
     }
 }

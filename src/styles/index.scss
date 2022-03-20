@@ -3,7 +3,6 @@
 body {
   margin: 0;
   font-family: $bodyFont;
-  // 1rem = 16px
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,19 +10,17 @@ body {
 
 // change the calc value depending on the height of the navbar
 .page-container {
-  //border: 1px solid green;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  max-width: 1600px;
+  max-width: 100rem;
   min-height: 100vh;
-  //min-height: calc(100vh - 90px);
 }
 .content-wrap {
   position: relative;
-  margin-top: 100px;
-  //padding-bottom includes 90px for footer, and 10px for space
-  padding-bottom: 100px;
+  margin-top: 6.25rem;
+  //padding-bottom includes 5.625rem for footer, and 0.625rem for space
+  padding-bottom: 6.25rem;
 }
 
 h1 {
@@ -37,7 +34,7 @@ h2 {
 }
 
 ul {
-  padding-inline-start: 20px;
+  padding-inline-start: 1.25rem;
 }
 
 a:link,

@@ -3,30 +3,30 @@
 .container {  
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: calc((100vh - 95px) * 0.23) calc((100vh - 95px) * 0.31) repeat(2, calc((100vh - 95px) * 0.23));
-    gap: 10px 10px;
+    grid-template-rows: calc((100vh - 5.9375rem) * 0.23) calc((100vh - 5.9375rem) * 0.31) repeat(2, calc((100vh - 5.9375rem) * 0.23));
+    gap: 0.625rem 0.625rem;
     grid-auto-flow: row;
     grid-template-areas:
       "about"
       "info"
       "work"
       "contact";
-    max-height: calc(100vh - 65px);
-    margin-top: 65px;
+    max-height: calc(100vh - 4.0625rem);
+    margin-top: 4.0625rem;
 }
 
 .about {  
     display: grid;
-    grid-template-columns: 170px 1fr;
+    grid-template-columns: 10.625rem 1fr;
     grid-template-rows: 1fr;
-    gap: 0px 10px;
+    gap: 0px 0.625rem;
     grid-auto-flow: row;
     grid-template-areas:
         "aboutImage aboutAccent";
     grid-area: about;
 
-    @media (min-width: 750px) {
-        grid-template-columns: 1fr 170px 4fr;
+    @media (min-width: 46.875rem) {
+        grid-template-columns: 1fr 10.625rem 4fr;
         grid-template-areas: 
             "leftAboutAccent aboutImage aboutAccent";
 
@@ -35,9 +35,6 @@
             background-color: #F0C378;
         }
     }
-    // @media (min-width: 750px) {
-    //     grid-template-columns: 1fr 230px 4fr;
-    // }
 }
 
 .aboutAccent { 
@@ -64,13 +61,13 @@
 
     div {
         margin: 0 auto;
-        width: 300px;
+        width: 18.75rem;
     }
 
     h2 {
         margin: 7% auto;
         font-family: Montserrat;
-        font-size: 28px;
+        font-size: 1.75rem;
         text-transform: uppercase;
         text-align: center;
     }
@@ -78,7 +75,7 @@
         font-family: Inter;
         font-weight: 500;
         text-align: center;
-        margin: 5px 0;
+        margin: 0.3125rem 0;
     }
 }
 
@@ -88,16 +85,16 @@ p.firstLine {
 
 .work {  
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 12.5rem;
     grid-template-rows: 1fr;
-    gap: 0px 10px;
+    gap: 0px 0.625rem;
     grid-auto-flow: row;
     grid-template-areas:
         "workAccent workImage";
     grid-area: work;
 
-    @media (min-width: 750px) {
-        grid-template-columns: 4fr 200px 1fr;
+    @media (min-width: 46.875rem) {
+        grid-template-columns: 4fr 12.5rem 1fr;
         grid-template-areas: 
             "workAccent workImage rightWorkAccent";
 
@@ -106,8 +103,8 @@ p.firstLine {
             background-color: #ED1C24;
         }
     }
-    @media (min-width: 750px) {
-        grid-template-columns: 4fr 300px 1fr;
+    @media (min-width: 46.875rem) {
+        grid-template-columns: 4fr 18.75rem 1fr;
     }
 }
 
@@ -130,16 +127,16 @@ p.firstLine {
 
 .contact {  
     display: grid;
-    grid-template-columns: 170px 1fr;
+    grid-template-columns: 10.625rem 1fr;
     grid-template-rows: 1fr;
-    gap: 0px 10px;
+    gap: 0px 0.625rem;
     grid-auto-flow: row;
     grid-template-areas:
         "contactImage contactAccent";
     grid-area: contact;
 
-    @media (min-width: 750px) {
-        grid-template-columns: 1fr 170px 4fr;
+    @media (min-width: 46.875rem) {
+        grid-template-columns: 1fr 10.625rem 4fr;
         grid-template-areas: 
             "leftContactAccent contactImage contactAccent";
 
@@ -148,9 +145,6 @@ p.firstLine {
             background-color: #38618C;
         }
     }
-    // @media (min-width: 750px) {
-    //     grid-template-columns: 1fr 230px 4fr;
-    // }
 }
 
 .contactImage { 
