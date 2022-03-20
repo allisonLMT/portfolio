@@ -3,6 +3,8 @@
 .pageNav {
     @include flex-vert-center-hor-space;
     padding: 3.125rem 0.9375rem 1.5625rem;
+    margin: 0 auto;
+    max-width: 75rem;
 
     a {
         display: flex;
