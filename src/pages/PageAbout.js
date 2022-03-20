@@ -5,7 +5,6 @@ import Button from '../components/Button';
 import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer';
 import styles from '../styles/pageAbout.module.scss';
-//import classes from 'classnames';
 
 
 function PageAbout() {
@@ -33,7 +32,7 @@ function PageAbout() {
         return(
             <div className='page-container' >
                 <SkipNavLink />
-                <NavMenu />
+                <NavMenu page={'about'} />
                 <SkipNavContent />
                 <div className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>

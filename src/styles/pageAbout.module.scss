@@ -9,6 +9,8 @@
         width: 18.75rem;
         height: 23.4375rem;
         margin-bottom: 1.5625rem;
+        border-radius: 3px;
+        filter: drop-shadow(2px 2px 2px darkgrey);
 
         @media (min-width: 56.25rem) {
             margin: 0 1.5625rem;

@@ -47,7 +47,7 @@ function PageContact() {
         return(
             <div className='page-container' >
                 <SkipNavLink />
-                <NavMenu />
+                <NavMenu page={'contact'}/>
                 <SkipNavContent />
                 <div className={classes('content-wrap', styles.contactWrap)} >
                     <h1>{restData.title.rendered}</h1>

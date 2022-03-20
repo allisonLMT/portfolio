@@ -35,7 +35,7 @@ function PageHome2() {
         return(
             <div className='page-container' >
                 <SkipNavLink />
-                <NavMenu />
+                <NavMenu page={'home'}/>
                 <SkipNavContent />
                 <div className={styles.container}>
                     <div className={styles.about}>

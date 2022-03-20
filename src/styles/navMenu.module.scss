@@ -149,7 +149,7 @@ nav.open {
 nav.desktopNav {
     display: none;
     a {
-        padding: 0 2.5rem;
+        margin: 0 2.5rem;
         text-decoration: none;
         font-size: 1.25rem;
     }
@@ -157,4 +157,12 @@ nav.desktopNav {
     @media (min-width: 62.5rem) {
         display: block;
     }
+}
+
+.desktopNav .active {
+   border-bottom: 2px solid black;
+}
+
+.desktopNav .inactive {
+    border-bottom: none;
 }

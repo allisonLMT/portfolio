@@ -41,7 +41,7 @@ function PagePortfolio( ) {
         return(
             <div className='page-container' >
                 <SkipNavLink />
-                <NavMenu />
+                <NavMenu page={'portfolio'}/>
                 <SkipNavContent />
                 <div className={classes('content-wrap')} >
                     <h1>Portfolio</h1>
