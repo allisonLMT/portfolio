@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
 import classes from 'classnames';
 import styles from '../styles/accordion.module.scss';
-import {ReactComponent as ArrowUp} from '../images/icons/arrow-up-circle.svg';
+import {ReactComponent as ArrowUp} from '../images/icons/arrow-up.svg';
 //import arrowDown from '../images/icons/arrow-down-thin.svg';
-import {ReactComponent as ArrowDown} from '../images/icons/arrow-down-circle.svg';
+import {ReactComponent as ArrowDown} from '../images/icons/arrow-down.svg';
 
 
 function Accordion({ section, project }) {
