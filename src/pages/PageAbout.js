@@ -77,7 +77,6 @@ function PageAbout() {
                         <Button url='contact' btnText="Contact Me" />
                         </section>
                     </div>
-                    
                 </div>
                 <Footer />
             </div>

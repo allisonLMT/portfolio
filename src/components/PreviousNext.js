@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/previousNext.module.scss';
-import arrowRight from '../images/icons/arrow-right-circle.svg';
-import arrowLeft from '../images/icons/arrow-left-circle.svg';
+import arrowRight from '../images/icons/arrow-right.svg';
+import arrowLeft from '../images/icons/arrow-left.svg';
 
 function PreviousNext( { prevID, prevLabel, nextID, nextLabel } ) {
 

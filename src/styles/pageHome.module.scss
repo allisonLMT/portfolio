@@ -45,12 +45,14 @@
 .aboutImage { 
     grid-area: aboutImage; 
     overflow: hidden;
+    filter: drop-shadow(2px 2px 2px darkgrey);
 
     img {
         object-fit: cover;
         display: block;
         width: 100%;
         height: 100%;
+       
     }
 }
 
@@ -116,6 +118,7 @@ p.firstLine {
 .workImage { 
     grid-area: workImage; 
     overflow: hidden;
+    filter: drop-shadow(2px 2px 2px darkgrey);
 
     img {
         object-fit: cover;
@@ -150,6 +153,7 @@ p.firstLine {
 .contactImage { 
     grid-area: contactImage; 
     overflow: hidden;
+    filter: drop-shadow(2px 2px 2px darkgrey);
 
     img {
         object-fit: cover;
@@ -162,6 +166,7 @@ p.firstLine {
 .contactAccent { 
     grid-area: contactAccent; 
     background-color: #38618C;
+    
 }
 
 .slideRight {
@@ -189,13 +194,13 @@ p.firstLine {
 }
 
 .fadeIn {
-    animation: fade-in ease 2s;
+    animation: fade-in ease 3s;
 }
 @keyframes fade-in{
     0% {
-      opacity:0;
+      opacity: 0;
     }
     100% {
-      opacity:1;
+      opacity: 1;
     }
 }
