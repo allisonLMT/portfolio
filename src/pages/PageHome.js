@@ -49,7 +49,7 @@ function PageHome2() {
                         <div className={styles.text}>
                             <p className={styles.firstLine}>hey, my name is...</p>
                             <h2>Allison Tredwell</h2>
-                            <p>I'm a Front End Web Developer </p>
+                            <p>I'm a <strong>Front End Web Developer</strong> </p>
                             <p>based in Vancouver, BC.</p>
                         </div>
                     </div>
