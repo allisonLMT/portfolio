@@ -41,6 +41,15 @@ function PageAbout() {
                             <img src={restData.acf.image.url} alt={restData.acf.image.alt} />
                         }
                         <section className={styles.aboutText}>
+                             {/* Intro */}
+                             { ( restData.acf.intro && restData.acf.intro_content ) && 
+                                <section>
+                                    <h2>{restData.acf.intro}</h2>
+                                        {restData.acf.intro_content.map((onePoint, i) => 
+                                            <p key={i}>{onePoint.intro_point}</p>
+                                        )}
+                                </section>
+                            }
                             {/* Education */}
                             { (restData.acf.education && restData.acf.education_content ) && 
                                 <section>
@@ -63,17 +72,7 @@ function PageAbout() {
                                     </ul>
                                 </section>
                             }
-                            {/* My Approach */}
-                            { ( restData.acf.my_approach && restData.acf.my_approach_content ) && 
-                                <section>
-                                    <h2>{restData.acf.my_approach}</h2>
-                                    <ul>
-                                        {restData.acf.my_approach_content.map((onePoint, i) => 
-                                            <li key={i}>{onePoint.approach}</li>
-                                        )}
-                                    </ul>
-                                </section>
-                            }
+                           
                         <Button url='contact' btnText="Contact Me" />
                         </section>
                     </div>

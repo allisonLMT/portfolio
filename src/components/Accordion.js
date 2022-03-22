@@ -32,9 +32,19 @@ function Accordion({ section, project }) {
                     { Array.isArray(project.acf[section+"_content"]) &&
                         <ul>
                             {content.map((oneRow, i) => 
-                                <li key={i}>{oneRow.content}</li>
+                                
+                                <>
+                                    <li key={i}>{oneRow.content}</li>
+                                    { oneRow.code_snippet &&
+                                    <pre className="language-jsx" key={i}>{oneRow.code_snippet}</pre> }
+                                </>
+                                
                             )}
+                            
                         </ul>
+                    }
+                    {content.code_snippet &&
+                        <pre className="language-jsx">`{content.code_snippet}</pre>
                     }
                 </div> 
             </section>
