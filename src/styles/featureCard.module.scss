@@ -1,5 +1,7 @@
+@use '_variables' as *;
+
 .featureCard {
-    background-color: #dcdcdc;
+    background-color: $accentGrey;
     filter: drop-shadow(2px 2px 2px darkgrey);
     padding:  5px 20px;
     margin: 10px auto;

@@ -1,5 +1,6 @@
 @use '_mixins' as *;
 
+
 .accordionHeader {
     @include flex-vert-center-hor-space;
     border-bottom: 1px solid #222222;
@@ -32,9 +33,17 @@ div.accordionHeader:hover,
 
 .accordionContent {
     display: none;
-    padding: 0.625rem 1.25rem;
+    padding: 1.875rem 1.25rem;
     max-width: 75rem;
     margin: 0 auto;
+
+    ul {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    li {
+        padding: 10px 0;
+    }
 }
 
 .open {

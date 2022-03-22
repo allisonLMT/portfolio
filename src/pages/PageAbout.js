@@ -44,7 +44,7 @@ function PageAbout() {
                             {/* Education */}
                             { (restData.acf.education && restData.acf.education_content ) && 
                                 <section>
-                                <h2>{restData.acf.education}</h2>
+                                    <h2>{restData.acf.education}</h2>
                                     <ul>
                                         {restData.acf.education_content.map((school, i) => 
                                             <li key={i}>{school.education}</li>

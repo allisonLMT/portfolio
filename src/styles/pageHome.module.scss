@@ -1,4 +1,5 @@
 @use 'mixins' as *;
+@use '_variables' as *;
 
 .container {  
     display: grid;
@@ -32,14 +33,14 @@
 
         .leftAboutAccent {
             grid-area: leftAboutAccent;
-            background-color: #F0C378;
+            background-color: $accentYellow;
         }
     }
 }
 
 .aboutAccent { 
     grid-area: aboutAccent; 
-    background-color: #F0C378;
+    background-color: $accentYellow;
 }
 
 .aboutImage { 
@@ -58,7 +59,7 @@
 
 .info {  
     grid-area: info;
-    background-color: #ACCEE2;
+    background-color: $accentLightBlue;
     @include flex-center-vert-hor;
 
     div {
@@ -102,7 +103,7 @@ p.firstLine {
 
         .rightWorkAccent {
             grid-area: rightWorkAccent;
-            background-color: #ED1C24;
+            background-color: $accentRed;
         }
     }
     @media (min-width: 46.875rem) {
@@ -112,7 +113,7 @@ p.firstLine {
 
 .workAccent { 
     grid-area: workAccent; 
-    background-color: #ED1C24;
+    background-color: $accentRed;
 }
 
 .workImage { 
@@ -145,7 +146,7 @@ p.firstLine {
 
         .leftContactAccent {
             grid-area: leftContactAccent;
-            background-color: #38618C;
+            background-color: $accentDarkBlue;
         }
     }
 }
@@ -165,7 +166,7 @@ p.firstLine {
 
 .contactAccent { 
     grid-area: contactAccent; 
-    background-color: #38618C;
+    background-color: $accentDarkBlue;
     
 }
 
