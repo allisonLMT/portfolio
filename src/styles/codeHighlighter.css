@@ -1,5 +1,5 @@
 /*
- * Visual Studio 2015 dark style
+ * Visual Studio 2015 dark style (modified)
  * Author: Nicolas LLOBERA <nllobera@gmail.com>
  */
 
@@ -11,12 +11,17 @@
   color: #DCDCDC;
 }
 
-.hljs-keyword,
+
 .hljs-literal,
 .hljs-symbol,
 .hljs-name {
   color: #569CD6;
 }
+
+.hljs-keyword {
+    color: #d07fc2;
+}
+
 .hljs-link {
   color: #569CD6;
   text-decoration: underline;
@@ -43,11 +48,17 @@
 }
 
 .hljs-subst,
-.hljs-function,
 .hljs-title,
-.hljs-params,
 .hljs-formula {
-  color: #DCDCDC;
+  color: #dbdda6;
+}
+
+.hljs-function {
+    color: #379dd9;
+}
+
+.hljs-params {
+    color: #88deff;
 }
 
 .hljs-comment,
