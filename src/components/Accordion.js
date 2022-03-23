@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import classes from 'classnames';
+import Highlight from 'react-highlight';
 import styles from '../styles/accordion.module.scss';
 import {ReactComponent as ArrowUp} from '../images/icons/arrow-up.svg';
-//import arrowDown from '../images/icons/arrow-down-thin.svg';
 import {ReactComponent as ArrowDown} from '../images/icons/arrow-down.svg';
 
 
@@ -36,7 +36,10 @@ function Accordion({ section, project }) {
                                 <>
                                     <li key={i}>{oneRow.content}</li>
                                     { oneRow.code_snippet &&
-                                    <pre className="language-jsx" key={i}>{oneRow.code_snippet}</pre> }
+                                        <Highlight className="hljs" key={i}>
+                                            {oneRow.code_snippet}
+                                        </Highlight>
+                                    }
                                 </>
                                 
                             )}
