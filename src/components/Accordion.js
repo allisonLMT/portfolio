@@ -10,6 +10,7 @@ function Accordion({ section, project }) {
 
     const [ isOpen, setIsOpen ] = useState(false);
     
+
     // toggle the state of the accordion, triggered onClick
     function handleToggle() {
         setIsOpen(!isOpen);
@@ -24,27 +25,33 @@ function Accordion({ section, project }) {
             {content &&
             <section className={styles.accordionSection}>
                 <div className={classes(styles.accordionHeader, (isOpen && styles.headerActive))}
-                onClick={() => { handleToggle() } }>
+                    onClick={() => { handleToggle() } }>
                     <h2>{header}</h2>
                     { isOpen ? <ArrowUp /> : <ArrowDown /> }
                 </div>
                 <div className={ classes( styles.accordionContent, { [styles.open] : isOpen} ) }>
                     { Array.isArray(project.acf[section+"_content"]) &&
-                        <ul>
-                            {content.map((oneRow, i) => 
-                                <li key={i}>{oneRow.content}
-                                    { oneRow.code_snippet &&
-                                        <Highlight className="hljs" key={i}>
-                                            {oneRow.code_snippet}
-                                        </Highlight>
-                                    }
-                                </li>
-                            )}
-                            
-                        </ul>
-                    }
-                    {content.code_snippet &&
-                        <pre className="language-jsx">`{content.code_snippet}</pre>
+                        <section>
+                        {content.map((oneRow, i) => 
+                            <section>
+                            { oneRow.development_sub_header && 
+                                <h3 key={i}>
+                                    {oneRow.development_sub_header}
+                                </h3>
+                            }
+                                <ul>
+                                    <li key={i}>
+                                        {oneRow.content}
+                                        { oneRow.code_snippet &&
+                                            <Highlight className="hljs" key={i}>
+                                                {oneRow.code_snippet}
+                                            </Highlight>
+                                        }
+                                    </li>
+                                </ul>
+                            </section>
+                        )}
+                        </section>
                     }
                 </div> 
             </section>

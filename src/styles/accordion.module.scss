@@ -37,9 +37,13 @@ div.accordionHeader:hover,
     max-width: 75rem;
     margin: 0 auto;
 
+    section {
+        margin: 0 auto;
+        max-width: 50rem;
+    }
     ul {
         margin: 0 auto;
-        max-width: 800px;
+        
     }
     li {
         padding: 10px 0;
