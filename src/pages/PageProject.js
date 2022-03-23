@@ -22,8 +22,6 @@ function PageProject( ) {
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
-    var closeAccordion = false;
-
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(restPath);
@@ -37,12 +35,6 @@ function PageProject( ) {
         }
         fetchData()
     }, [restPath]);
-
-    useEffect(() => {
-        //if the currentProjObj changes, then the accordion components will be signalled to close
-        closeAccordion = true;
-        console.log("id changed")
-    }, [id])
     
     if ( isLoaded ) {
 
@@ -85,7 +77,6 @@ function PageProject( ) {
         };
 
         findProject();
-
 
         return(
             <div className='page-container' >
@@ -152,10 +143,10 @@ function PageProject( ) {
                         </section>  
                     }
                     <div className={styles.accordions}>
-                        <Accordion key={"process-"+id} section="process" project={currentProjObj} closeAccordion={closeAccordion} />
-                        <Accordion key={"design-"+id} section="design" project={currentProjObj} closeAccordion={closeAccordion} />
-                        <Accordion key={"dev-"+id} section="development" project={currentProjObj} closeAccordion={closeAccordion} />
-                        <Accordion key={"conclusion-"+id} section="conclusion" project={currentProjObj} closeAccordion={closeAccordion} />
+                        <Accordion key={"process-"+id} section="process" project={currentProjObj}  />
+                        <Accordion key={"design-"+id} section="design" project={currentProjObj}  />
+                        <Accordion key={"dev-"+id} section="development" project={currentProjObj}  />
+                        <Accordion key={"conclusion-"+id} section="conclusion" project={currentProjObj}  />
                     </div>
                     <PreviousNext prevID={prevID} prevLabel={prevLabel} nextID={nextID} nextLabel={nextLabel}/>
                 </div> {/* end content-wrap */}

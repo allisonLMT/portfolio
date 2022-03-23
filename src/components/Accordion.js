@@ -6,11 +6,9 @@ import {ReactComponent as ArrowUp} from '../images/icons/arrow-up.svg';
 import {ReactComponent as ArrowDown} from '../images/icons/arrow-down.svg';
 
 
-function Accordion({ section, project, closeAccordion }) {
+function Accordion({ section, project }) {
 
     const [ isOpen, setIsOpen ] = useState(false);
-    
-    console.log(closeAccordion)
 
     // toggle the state of the accordion, triggered onClick
     function handleToggle() {
