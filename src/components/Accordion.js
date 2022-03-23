@@ -6,10 +6,11 @@ import {ReactComponent as ArrowUp} from '../images/icons/arrow-up.svg';
 import {ReactComponent as ArrowDown} from '../images/icons/arrow-down.svg';
 
 
-function Accordion({ section, project }) {
+function Accordion({ section, project, closeAccordion }) {
 
     const [ isOpen, setIsOpen ] = useState(false);
     
+    console.log(closeAccordion)
 
     // toggle the state of the accordion, triggered onClick
     function handleToggle() {
@@ -33,23 +34,23 @@ function Accordion({ section, project }) {
                     { Array.isArray(project.acf[section+"_content"]) &&
                         <section>
                         {content.map((oneRow, i) => 
-                            <section>
+                            <section key={i}>
                             { oneRow.development_sub_header && 
-                                <h3 key={i}>
-                                    {oneRow.development_sub_header}
-                                </h3>
+                            <h3>
+                                {oneRow.development_sub_header}
+                            </h3>
                             }
-                                <ul>
-                                    <li key={i}>
-                                        {oneRow.content}
-                                        { oneRow.code_snippet &&
-                                            <Highlight className="hljs" key={i}>
-                                                {oneRow.code_snippet}
-                                            </Highlight>
-                                        }
-                                    </li>
-                                </ul>
-                            </section>
+                            <ul>
+                                <li>
+                                    {oneRow.content}
+                                    { oneRow.code_snippet &&
+                                        <Highlight className="hljs" key={i}>
+                                            {oneRow.code_snippet}
+                                        </Highlight>
+                                    }
+                                </li>
+                            </ul>
+                        </section>
                         )}
                         </section>
                     }
