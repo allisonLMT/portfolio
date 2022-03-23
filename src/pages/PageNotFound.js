@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
+import styles from '../styles/pageNotFound.module.scss';
 import NavMenu from '../components/NavMenu.js';
 import Footer from '../components/Footer.js';
 
@@ -14,6 +16,10 @@ function PageNotFound() {
             <SkipNavContent />
             <div className='content-wrap' >
                 <h1>Page Not Found</h1>
+                <div className={styles.goHome}>
+                    <p>The page you're looking for can't be found.</p>
+                    <Link to='/'>Return to Home</Link>
+                </div>
             </div>
             <Footer />
         </div>
