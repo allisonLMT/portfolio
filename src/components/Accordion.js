@@ -34,13 +34,16 @@ function Accordion({ section, project }) {
                         {content.map((oneRow, i) => 
                             <section key={i}>
                             { oneRow.development_sub_header && 
+                            // sub-header (only in Dev) 
                             <h3>
                                 {oneRow.development_sub_header}
                             </h3>
                             }
                             <ul>
                                 <li>
-                                    {oneRow.content}
+                                    {/* accordion content */}
+                                    {oneRow.content} 
+                                    {/* code snippet (only in Dev) */}
                                     { oneRow.code_snippet &&
                                         <Highlight className="hljs" key={i}>
                                             {oneRow.code_snippet}

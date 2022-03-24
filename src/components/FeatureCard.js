@@ -3,16 +3,21 @@ import styles from '../styles/featureCard.module.scss';
 
 
 function FeatureCard ({ feature }) {
-
+    //displays project feature image on mobile, and video on tablet/desktop sizes
     return (
         <div className={styles.featureCard}>
+            <div className={styles.featureLeft}>
             {feature.feature_title && <h4>{feature.feature_title}</h4>}
+            {feature.feature_image && 
+                <img src={feature.feature_image.url} alt={feature.feature_image.alt} className={styles.featureImage} />
+            }
             {feature.feature_media &&
-                <video src={feature.feature_media} autoPlay="autoplay" muted loop width='320'>
+                <video src={feature.feature_media} autoPlay="autoplay" muted loop className={styles.featureVideo}>
                     Your browser does not support the video tag.
                 </video>
             }
-            {feature.feature_content && <p>{feature.feature_content}</p>}
+            </div>
+            {feature.feature_content && <p className={styles.featureContent}>{feature.feature_content}</p>}
         </div>
     )
 }
