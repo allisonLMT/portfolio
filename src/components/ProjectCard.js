@@ -7,12 +7,16 @@ function ProjectCard({ project }) {
 
     return (
         <article key={project.id} className={styles.card}>
-            <Link to={`/project/${project.id}`} className={styles.info} >
+            <Link to={`/project/${project.id}`} className={styles.project} >
                 <img src={project.acf.cover_image.url} alt={project.acf.cover_image.alt} />
-                <h2>{project.title.rendered}</h2>
-                <p>{project.acf.one_liner}</p>
             </Link>
-            <Button url={`/project/${project.id}`} btnText="Learn More" />
+                <div className={styles.projectInfo}>
+                    <h2>{project.title.rendered}</h2>
+                    <p>{project.acf.one_liner}</p>
+            
+                    <Button url={`/project/${project.id}`} btnText="Learn More" />
+                </div>
+            
         </article>
     );
 };
