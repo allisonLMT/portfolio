@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
 import styles from '../styles/pageProject.module.scss';
-//import classes from 'classnames';
 import NavMenu from '../components/NavMenu';
 import Button from '../components/Button';
 import FeatureCard from '../components/FeatureCard';

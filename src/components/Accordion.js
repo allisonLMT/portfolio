@@ -35,9 +35,7 @@ function Accordion({ section, project }) {
                             <section key={i}>
                             { oneRow.development_sub_header && 
                             // sub-header (only in Dev) 
-                            <h3>
-                                {oneRow.development_sub_header}
-                            </h3>
+                            <h3>{oneRow.development_sub_header}</h3>
                             }
                             <ul>
                                 <li>
@@ -47,11 +45,10 @@ function Accordion({ section, project }) {
                                     { oneRow.code_snippet &&
                                         <Highlight className="hljs" key={i}>
                                             {oneRow.code_snippet}
-                                        </Highlight>
-                                    }
+                                        </Highlight>}
                                 </li>
                             </ul>
-                        </section>
+                            </section>
                         )}
                         </section>
                     }
