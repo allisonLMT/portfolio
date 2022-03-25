@@ -6,7 +6,7 @@ img.projectCoverImage {
     height: 18.75rem;
     margin: 0 auto;
     padding: 1.25rem;
-    filter: drop-shadow(2px 2px 2px darkgrey);
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
 
     @media(min-width: 43.75rem) {
         width: 28.125rem;
