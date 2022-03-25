@@ -9,7 +9,6 @@ import NavMenu from '../components/NavMenu.js';
 
 function PageHome2() {
 
-
     window.scrollTo(0, 0);
 
     const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/pages/7?acf_format=standard';

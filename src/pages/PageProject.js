@@ -88,21 +88,21 @@ function PageProject( ) {
                         <div className={styles.infoWrap}>
                             <img src={currentProjObj.acf.cover_image.url} alt={currentProjObj.acf.cover_image.alt} className={styles.projectCoverImage}/>
                             <section className={styles.projectInfo}>
-                                
                                 { currentProjObj.acf.project_overview_content &&
+                                // Overview
                                 <section>
                                     <h2>Project Overview</h2>
                                     <p>{currentProjObj.acf.project_overview_content}</p>
                                 </section>
                                 }
-
+                                {/* Role */}
                                 { currentProjObj.acf.role_content &&
                                 <section>
                                     <h3>Role</h3>
                                     <p>{currentProjObj.acf.role_content}</p>
                                 </section>
                                 }
-
+                                {/* Languages and Tools */}
                                 { currentProjObj.acf.languages_tools &&
                                 <section>
                                     <h3>Languages &amp; Tools</h3>
@@ -113,7 +113,7 @@ function PageProject( ) {
                                     </ul>
                                 </section>
                                 }
-                            
+                                {/* Requirements */}
                                 { currentProjObj.acf.requirements &&
                                     <section>
                                         <h3>Requirements</h3>
@@ -127,10 +127,9 @@ function PageProject( ) {
                                 {/* Portfolio ID is "45", don't render a link to project on Portfolio page */}
                                 {(id !== "45") && <Button url={currentProjObj.acf.project_url} btnText="Live Project" />}
                             </section>
-                            
                         </div>
                     </div>  
-                    
+                    {/* Features */}
                     { currentProjObj.acf.feature &&    
                         <section className={styles.marginWrap}>
                             <h2 className={styles.featureHeader}>Features</h2>

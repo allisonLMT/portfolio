@@ -2,7 +2,7 @@
 
 .button {
    @include flex-center-vert-hor;
-    filter: drop-shadow(2px 2px 1.5px darkgrey);
+    filter: drop-shadow(0.125rem 0.125rem 0.0938rem darkgrey);
 
     &:active {
         transform: scale(0.95, 0.95);

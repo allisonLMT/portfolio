@@ -21,7 +21,7 @@ article.card:nth-child(2) {
     flex-direction: row-reverse;
 
     .projectInfo {
-        border-radius: 7px 0 0 7px;
+        border-radius: 0.4375rem 0 0 0.4375rem;
     }
 }
 
@@ -34,11 +34,11 @@ article.card:nth-child(2) {
         margin: 0 auto;
         height: auto;
         max-width: 100%;
-        border-radius: 7px;
+        border-radius: 0.4375rem;
 
-        @media (min-width: 1000px) {
-            width: 500px;
-            filter: drop-shadow(3px 3px 5px #44444475);
+        @media (min-width: 62.5rem) {
+            width: 31.25rem;
+            filter: drop-shadow(0.1875rem 0.1875rem 0.3125rem #44444475);
         }
     }
 }
@@ -60,12 +60,11 @@ article.card:nth-child(2) {
         padding: 1.5625rem;
         text-align: left;
         background-color: #dcdcdc;
-        border-radius: 0 7px 7px 0;
-        //filter: drop-shadow(3px 3px 7px #44444465);
+        border-radius: 0 0.4375rem 0.4375rem 0;
 
         a {
             //Learn More button
-            filter: drop-shadow(2px 2px 2px darkgrey)
+            filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey)
         }
     }
 }

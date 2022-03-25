@@ -13,7 +13,6 @@ function PagePortfolio( ) {
 
     window.scrollTo(0, 0);
 
-    //gets all of the posts in the 'portfolio-project' CPT in an array
     const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/portfolio-project?acf_format=standard'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
@@ -37,7 +36,6 @@ function PagePortfolio( ) {
         let projectIDarr = [];
         restData.map((project) => projectIDarr.push(project.id));
       
-        
         return(
             <div className='page-container' >
                 <SkipNavLink />

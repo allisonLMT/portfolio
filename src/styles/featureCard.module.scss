@@ -5,10 +5,10 @@
     flex-wrap: wrap;
     align-items: center;
     background-color: $accentGrey;
-    filter: drop-shadow(2px 2px 2px darkgrey);
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
     padding: 1.25rem;
     margin: 0.625rem 1.25rem;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
    
     @media (min-width: 62.5rem) {
         flex-direction: row;

@@ -45,7 +45,7 @@ function PageContact() {
 
     if ( isLoaded ) {
         return(
-            <div className='page-container' >
+            <div className='page-container'>
                 <SkipNavLink />
                 <NavMenu page={'contact'}/>
                 <SkipNavContent />
@@ -56,13 +56,13 @@ function PageContact() {
                         <p>{restData.acf.contact_content[1].line}</p>
                         <p>{restData.acf.contact_content[2].line}</p>
                     </a>
-                        <div className={styles.email} onClick={() => { handleToggle() }}>
-                            <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
-                                allison.tredwell@gmail.com
-                                <img src={copy} alt="copy icon" className={styles.copyEmail}/>
-                            </Clipboard>
-                        </div>
-                        <p className={styles.popup}>{!isCopied ? "Copy Email" : "Copied!"}</p>
+                    <div className={styles.email} onClick={() => { handleToggle() }}>
+                        <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
+                            allison.tredwell@gmail.com
+                            <img src={copy} alt="copy icon" className={styles.copyEmail}/>
+                        </Clipboard>
+                    </div>
+                    <p className={styles.popup}>{!isCopied ? "Copy Email" : "Copied!"}</p>
                 </div>
                 <Footer />
             </div>

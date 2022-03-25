@@ -3,7 +3,7 @@
 
 .accordionHeader {
     @include flex-vert-center-hor-space;
-    border-bottom: 1px solid #222222;
+    border-bottom: 0.0625rem solid #222222;
     
     padding: 0 25px;
     height: 4.0625rem;
@@ -27,7 +27,7 @@ div.accordionHeader:hover,
 
 .accordions:first-child {
     div.accordionHeader {
-    border-top: 1px solid #222222;
+    border-top: 0.0625rem solid #222222;
     }
 }
 
@@ -49,11 +49,11 @@ div.accordionHeader:hover,
         padding: 0.625rem 0;
     }
     img {
-        padding: 25px 0 0;
+        padding: 1.5625rem 0 0;
     }
 }
 
 .open {
     display: block;
-    border-bottom: 1px solid #222222;
+    border-bottom: 0.0625rem solid #222222;
 }

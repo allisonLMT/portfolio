@@ -41,8 +41,8 @@ function PageAbout() {
                             <img src={restData.acf.image.url} alt={restData.acf.image.alt} />
                         }
                         <section className={styles.aboutText}>
-                             {/* Intro */}
-                             { ( restData.acf.intro && restData.acf.intro_content ) && 
+                            {/* Intro */}
+                            { ( restData.acf.intro && restData.acf.intro_content ) && 
                                 <section>
                                     <h2>{restData.acf.intro}</h2>
                                         {restData.acf.intro_content.map((onePoint, i) => 
@@ -72,7 +72,6 @@ function PageAbout() {
                                     </ul>
                                 </section>
                             }
-                           
                         <Button url='contact' btnText="Contact Me" />
                         </section>
                     </div>

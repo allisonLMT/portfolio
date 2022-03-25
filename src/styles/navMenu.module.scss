@@ -21,7 +21,6 @@
     }
 }
 
-
 .siteTitle {
     font-family: $logoFont;
     font-size: 1.25rem;
@@ -139,7 +138,7 @@ nav.open {
     width: 100%;
     z-index: 100;
     overflow: hidden;
-    filter: drop-shadow(2px 2px 2px black);
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem black);
 
     @media (min-width: 62.5rem) {
         display: none;
@@ -160,7 +159,7 @@ nav.desktopNav {
 }
 
 .desktopNav .active {
-   border-bottom: 2px solid black;
+   border-bottom: 0.125rem solid black;
 }
 
 .desktopNav .inactive {
