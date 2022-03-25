@@ -10,13 +10,11 @@ function ProjectCard({ project }) {
             <Link to={`/project/${project.id}`} className={styles.projectImage} >
                 <img src={project.acf.cover_image.url} alt={project.acf.cover_image.alt} />
             </Link>
-                <div className={styles.projectInfo}>
-                    <h2>{project.title.rendered}</h2>
-                    <p>{project.acf.one_liner}</p>
-            
-                    <Button url={`/project/${project.id}`} btnText="Learn More" />
-                </div>
-            
+            <div className={styles.projectInfo}>
+                <h2>{project.title.rendered}</h2>
+                <p>{project.acf.one_liner}</p>
+                <Button url={`/project/${project.id}`} btnText="Learn More" />
+            </div>
         </article>
     );
 };

@@ -46,6 +46,7 @@ function Accordion({ section, project }) {
                                         <Highlight className="hljs" key={i}>
                                             {oneRow.code_snippet}
                                         </Highlight>}
+                                    {/* content image */}
                                     {oneRow.image &&
                                         <img src={oneRow.image.url} alt={oneRow.image.alt} />
                                     }
