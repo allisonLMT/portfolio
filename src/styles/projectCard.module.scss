@@ -20,16 +20,8 @@ article.card {
 article.card:nth-child(2) {
     flex-direction: row-reverse;
 
-    img {
-        filter: drop-shadow(-2px 2px 3px #44444465);
-    }
-
     .projectInfo {
         border-radius: 7px 0 0 7px;
-        a{
-            filter: drop-shadow(-2px 2px 2px darkgrey)
-        }
-
     }
 }
 
@@ -46,7 +38,7 @@ article.card:nth-child(2) {
 
         @media (min-width: 1000px) {
             width: 500px;
-            filter: drop-shadow(2px 2px 3px #44444465);
+            filter: drop-shadow(3px 3px 5px #44444475);
         }
     }
 }
