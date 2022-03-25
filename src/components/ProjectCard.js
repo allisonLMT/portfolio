@@ -7,7 +7,7 @@ function ProjectCard({ project }) {
 
     return (
         <article key={project.id} className={styles.card}>
-            <Link to={`/project/${project.id}`} className={styles.project} >
+            <Link to={`/project/${project.id}`} className={styles.projectImage} >
                 <img src={project.acf.cover_image.url} alt={project.acf.cover_image.alt} />
             </Link>
                 <div className={styles.projectInfo}>
