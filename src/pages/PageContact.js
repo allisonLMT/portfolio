@@ -14,7 +14,7 @@ function PageContact() {
 
     window.scrollTo(0, 0);
 
-    const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/pages/13?acf_format=standard';
+    const restPath = 'https://atredwell.com/wordpress-portfolio/wp-json/wp/v2/pages/13?acf_format=standard';
     const [restData, setData] = useState([]);
     const [isLoaded, setLoadStatus] = useState(false);
 

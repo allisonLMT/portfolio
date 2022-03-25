@@ -9,7 +9,7 @@ import styles from '../styles/pageAbout.module.scss';
 
 function PageAbout() {
 
-    const restPath = 'https://atredwell.com/portfolio/wp-json/wp/v2/pages/11?acf_format=standard';
+    const restPath = 'https://atredwell.com/wordpress-portfolio/wp-json/wp/v2/pages/11?acf_format=standard';
     const [restData, setData] = useState([]);
     const [isLoaded, setLoadStatus] = useState(false);
 
