@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
+import Div100vh from 'react-div-100vh';
 import classes from 'classnames';
 import styles from '../styles/pageHome.module.scss';
 import NavMenu from '../components/NavMenu.js';
 
 
-function PageHome2() {
+function PageHome() {
 
     window.scrollTo(0, 0);
 
@@ -32,7 +33,7 @@ function PageHome2() {
     
     if ( isLoaded ) {
         return(
-            <div className='page-container' >
+            <Div100vh className='page-container' >
                 <SkipNavLink />
                 <NavMenu page={'home'}/>
                 <SkipNavContent />
@@ -67,9 +68,9 @@ function PageHome2() {
                         <div className={classes(styles.fadeIn,styles.contactAccent)}></div>
                     </div>
                 </div>
-            </div>
+            </Div100vh>
         );
     }
     return <img src="../loading.gif" alt="Loading" className="loading" id="loading" />;
 };
-export default PageHome2;
+export default PageHome;
