@@ -87,7 +87,10 @@ p.firstLine {
 
 .work {  
     display: grid;
-    grid-template-columns: 1fr 12.5rem;
+    grid-template-columns: 1fr 70%;
+    @media (min-width: 430px) {
+        grid-template-columns: 1fr 200px;
+    }
     grid-template-rows: 1fr;
     gap: 0px 0.625rem;
     grid-auto-flow: row;

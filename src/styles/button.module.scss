@@ -4,6 +4,7 @@
    @include flex-center-vert-hor;
     filter: drop-shadow(0.125rem 0.125rem 0.0938rem darkgrey);
 
+    &:hover,
     &:active {
         transform: scale(0.95, 0.95);
     }
