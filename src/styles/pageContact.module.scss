@@ -42,7 +42,7 @@ button {
     }
 }
 
-div.email {
+section.email {
     display: inline-block;
     margin-left: 50%;
     //adjusts by half the width of the div, to center it
@@ -50,7 +50,7 @@ div.email {
     margin-top: 2.5rem;
 }
 
-div.email + p.popup {
+section.email + p.popup {
     display: none;
     background: #ACCEE2;
     max-width: 9.375rem;
@@ -58,7 +58,7 @@ div.email + p.popup {
     border-radius: 0.3125rem;
 }
 
-div.email:hover + p.popup {
+section.email:hover + p.popup {
     display: block;
     color: black;
 }

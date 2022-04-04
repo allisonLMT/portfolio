@@ -82,7 +82,7 @@ function PageProject( ) {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <div className='content-wrap' >
+                <section className='content-wrap' >
                     <div className={styles.marginWrap}>
                         <h1>{currentProjObj.title.rendered}</h1>
                         <div className={styles.infoWrap}>
@@ -133,21 +133,21 @@ function PageProject( ) {
                     { currentProjObj.acf.feature &&    
                         <section className={styles.marginWrap}>
                             <h2 className={styles.featureHeader}>Features</h2>
-                            <div className={styles.features}>
+                            <section className={styles.features}>
                                 {currentProjObj.acf.feature.map((oneRow, i) => 
                                     <FeatureCard key={i} feature={oneRow}/>
                                 )}
-                            </div>
+                            </section>
                         </section>  
                     }
-                    <div className={styles.accordions}>
+                    <section className={styles.accordions}>
                         <Accordion key={"process-"+id} section="process" project={currentProjObj}  />
                         <Accordion key={"design-"+id} section="design" project={currentProjObj}  />
                         <Accordion key={"dev-"+id} section="development" project={currentProjObj}  />
                         <Accordion key={"conclusion-"+id} section="conclusion" project={currentProjObj}  />
-                    </div>
+                    </section>
                     <PreviousNext prevID={prevID} prevLabel={prevLabel} nextID={nextID} nextLabel={nextLabel}/>
-                </div> {/* end content-wrap */}
+                </section> {/* end content-wrap */}
                 
                 <Footer />
             </div>

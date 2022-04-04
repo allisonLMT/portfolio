@@ -34,7 +34,7 @@ function PageAbout() {
                 <SkipNavLink />
                 <NavMenu page={'about'} />
                 <SkipNavContent />
-                <div className='content-wrap' >
+                <section className='content-wrap' >
                     <h1>{restData.title.rendered}</h1>
                     <div className={styles.aboutWrap}>
                         {restData.acf.image.url &&
@@ -75,7 +75,7 @@ function PageAbout() {
                         <Button url='contact' btnText="Contact Me" />
                         </section>
                     </div>
-                </div>
+                </section>
                 <Footer />
             </div>
         );

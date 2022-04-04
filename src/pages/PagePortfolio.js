@@ -41,14 +41,14 @@ function PagePortfolio( ) {
                 <SkipNavLink />
                 <NavMenu page={'portfolio'}/>
                 <SkipNavContent />
-                <div className={classes('content-wrap')} >
+                <section className={classes('content-wrap')} >
                     <h1>Portfolio</h1>
                     <div className={styles.projects}>
                         {restData.map((eachProject, i) =>
                             <ProjectCard key={eachProject.id} project={restData[i]} />
                         )}
                     </div>
-                </div>
+                </section>
                 <Footer />
             </div>
         );

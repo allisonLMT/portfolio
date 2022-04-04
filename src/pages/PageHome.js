@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
-import { use100vh } from 'react-div-100vh';
 import classes from 'classnames';
 import styles from '../styles/pageHome.module.scss';
 import NavMenu from '../components/NavMenu.js';
@@ -30,15 +29,14 @@ function PageHome() {
         fetchData()
     }, [restPath])
 
-    const height = use100vh();
     
     if ( isLoaded ) {
         return(
-            <div className='page-container' key={height} style={{height: height}}>
+            <div className={styles.pageHomeContainer} >
                 <SkipNavLink />
                 <NavMenu page={'home'}/>
                 <SkipNavContent />
-                <div className={styles.container}>
+                <section className={styles.container}>
                     <div className={styles.about}>
                         <div className={styles.leftAboutAccent}></div>
                         <Link to="/about" className={styles.aboutImage}>
@@ -68,7 +66,7 @@ function PageHome() {
                         </Link>
                         <div className={classes(styles.fadeIn,styles.contactAccent)}></div>
                     </div>
-                </div>
+                </section>
             </div>
         );
     }

@@ -49,21 +49,21 @@ function PageContact() {
                 <SkipNavLink />
                 <NavMenu page={'contact'}/>
                 <SkipNavContent />
-                <div className={classes('content-wrap', styles.contactWrap)} >
+                <section className={classes('content-wrap', styles.contactWrap)} >
                     <h1>{restData.title.rendered}</h1>
                     <h2>{restData.acf.contact_content[0].line}</h2>
                     <a href="mailto: allison.tredwell@gmail.com" className={classes(styles.smalltext, styles.accent)}>
                         <p>{restData.acf.contact_content[1].line}</p>
                         <p>{restData.acf.contact_content[2].line}</p>
                     </a>
-                    <div className={styles.email} onClick={() => { handleToggle() }}>
+                    <section className={styles.email} onClick={() => { handleToggle() }}>
                         <Clipboard data-clipboard-text="allison.tredwell@gmail.com" >
                             allison.tredwell@gmail.com
-                            <img src={copy} alt="copy icon" className={styles.copyEmail}/>
+                            <img src={copy} alt="copy this email address" className={styles.copyEmail}/>
                         </Clipboard>
-                    </div>
+                    </section>
                     <p className={styles.popup}>{!isCopied ? "Copy Email" : "Copied!"}</p>
-                </div>
+                </section>
                 <Footer />
             </div>
         );
