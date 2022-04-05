@@ -7,7 +7,7 @@ import arrowLeft from '../images/icons/arrow-left.svg';
 function PreviousNext( { prevID, prevLabel, nextID, nextLabel } ) {
 
     return (
-        <div className={styles.pageNav}>
+        <nav className={styles.pageNav}>
             <div className={styles.previous}>
                 <Link to={`/project/${prevID}`}>
                     <img src={arrowLeft} alt="previous project" /> {prevLabel}
@@ -18,7 +18,7 @@ function PreviousNext( { prevID, prevLabel, nextID, nextLabel } ) {
                     {nextLabel} <img src={arrowRight} alt="next project" />
                 </Link>
             </div>
-        </div>
+        </nav>
     )
 }
 

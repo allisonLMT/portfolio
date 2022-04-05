@@ -82,7 +82,7 @@ function PageProject( ) {
                 <SkipNavLink />
                 <NavMenu />
                 <SkipNavContent />
-                <section className='content-wrap' >
+                <article className='content-wrap' >
                     <div className={styles.marginWrap}>
                         <h1>{currentProjObj.title.rendered}</h1>
                         <div className={styles.infoWrap}>
@@ -147,7 +147,7 @@ function PageProject( ) {
                         <Accordion key={"conclusion-"+id} section="conclusion" project={currentProjObj}  />
                     </section>
                     <PreviousNext prevID={prevID} prevLabel={prevLabel} nextID={nextID} nextLabel={nextLabel}/>
-                </section> {/* end content-wrap */}
+                </article> {/* end content-wrap */}
                 
                 <Footer />
             </div>
