@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
+import classes from 'classnames';
 import Button from '../components/Button';
 import NavMenu from '../components/NavMenu'
 import Footer from '../components/Footer';
@@ -38,7 +39,7 @@ function PageAbout() {
                     <h1>{restData.title.rendered}</h1>
                     <div className={styles.aboutWrap}>
                         {restData.acf.image.url &&
-                            <img src={restData.acf.image.url} alt={restData.acf.image.alt} />
+                            <img src={restData.acf.image.url} alt={restData.acf.image.alt} className={classes(styles.fadeInColor)} />
                         }
                         <section className={styles.aboutText}>
                             {/* Intro */}
