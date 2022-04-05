@@ -5,22 +5,20 @@
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem;
     background-color: $accentGrey;
     filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey);
     padding: 1.25rem;
-    padding: 1.25rem 0;
     margin: 0.625rem 1.25rem;
-    margin: 0.625rem 0;
     border-radius: 0.4375rem;
    
     @media (min-width: 62.5rem) {
         flex-direction: row;
         padding: 2.5rem 1.875rem;
-        
-        //margin: 1.5625rem 1.25rem;
+        margin: 1.5625rem 1.25rem;
+    }
+    @media (min-width: 78.125rem) {
         margin: 1.5625rem 0;
-
     }
 
     h4 {
@@ -52,11 +50,15 @@ img.featureImage {
 }
 
 .featureContent {
-    max-width: 600px;
+    max-width: 37.5rem;
     margin: 1.25rem auto;
 
-    @media (min-width: 1000px) {
-        width: 400px;
+    @media (min-width: 62.5rem) {
+        width: 18.75rem;
         padding: 0 1.25rem;
+    }
+
+    @media (min-width: 68.75rem) {
+        width: 25rem;
     }
 }

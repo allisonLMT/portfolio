@@ -6,14 +6,16 @@ article.card {
     @include flex-wrap-center-space-btwn;
     position: relative;
     margin: 0 1.25rem;
-    padding: 1.875rem 0;
+    padding: 30px 0;
     width: 100%;
+    max-width: 1200px;
 
     @media (min-width: 28.125rem) {
         margin: 0 2.5rem;
     }
     @media (min-width: 62.5rem) {
         margin: 1.25rem 2.5rem;
+        padding: 40px 0;
     }
 }
 
@@ -36,35 +38,44 @@ article.card:nth-child(2) {
         max-width: 100%;
         border-radius: 0.4375rem;
 
-        @media (min-width: 62.5rem) {
-            width: 31.25rem;
+        @media (min-width: 1000px) {
+            width: 500px;
             filter: drop-shadow(0.1875rem 0.1875rem 0.3125rem #44444475);
+        }
+        @media (min-width: 1100px) {
+            width: 600px;
         }
     }
 }
 
 .projectInfo {
     @include flex-wrap-center-space-btwn;
+    flex-direction: column;
     position: relative;
     z-index: 5;
     text-align: center;
-    max-width: 25rem;
+    max-width: 400px;
 
     h2,
     p {
         padding-left: 0.625rem;
     }
 
-    @media (min-width: 62.5rem) {
+    @media (min-width: 1000px) {
         justify-content: center;
-        padding: 1.5625rem;
+        padding: 30px 1.5625rem;
         text-align: left;
         background-color: #dcdcdc;
         border-radius: 0 0.4375rem 0.4375rem 0;
+        //max-width: 600px;
 
         a {
             //Learn More button
             filter: drop-shadow(0.125rem 0.125rem 0.125rem darkgrey)
         }
+    }
+    @media (min-width: 1200px) {
+        max-width: 500px;
+       text-align: center;
     }
 }
