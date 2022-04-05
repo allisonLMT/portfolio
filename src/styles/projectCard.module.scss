@@ -6,7 +6,7 @@ article.card {
     @include flex-wrap-center-space-btwn;
     position: relative;
     margin: 0 1.25rem;
-    padding: 25px 0;
+    padding: 1.875rem 0;
     width: 100%;
 
     @media (min-width: 28.125rem) {
